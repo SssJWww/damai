@@ -1,32 +1,72 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div>
+    <router-view></router-view>
+    <tabbar></tabbar>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import tabbar from '@/components/tabbar'
+export default {
+  components: {
+    tabbar
+  }
 }
+</script>
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+<style lang="scss">
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+ol,
+dl,
+dt,
+dd,
+input,
+p,
+figure {
+  padding: 0;
+  margin: 0;
+}
+ul,
+ol {
+  list-style: none;
+}
+input {
+  outline: none;
+}
+img {
+  display: block;
+}
+html,
+body {
+  height: 100%;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "微软雅黑";
+  font-size: 14px;
+  color: #333;
+}
+html {
+  font-size: 13.33vw;
+}
+ul {
+  list-style: none;
+  li{
+    float:left;
   }
 }
 </style>
