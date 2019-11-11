@@ -65,8 +65,12 @@ html {
 }
 ul {
   list-style: none;
-  li{
-    float:left;
+  li {
+    float: left;
+    color: #999;
   }
+}
+.tab-color {
+  color: #ff4040;
 }
 </style>

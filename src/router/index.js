@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import damai91 from '@/components/damai91'
+import damai91 from '@/views/damai91'
 import story from '@/views/story'
 import circle from '@/views/circle'
 import myself from '@/views/myself'
@@ -9,7 +9,7 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
+    path: '/main',
     name: 'damai91',
     component: damai91
   },
@@ -24,6 +24,14 @@ const routes = [
   {
     path: '/myself',
     component: myself
+  },
+  {
+    path: '*',
+    redirect: '/main'
+  },
+  {
+    path: '/',
+    redirect: '/main'
   }
 
 ]

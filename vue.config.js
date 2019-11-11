@@ -4,13 +4,13 @@ module.exports = {
     overlay: {
       warnings: false,
       errors: false
+    },
+    proxy: {
+      '/api': {
+        target: 'http://www.91damai.com',
+        changeOrigin: true
+      }
     }
-    //   proxy: {
-    //     '/ajax': {
-    //       target: 'http://m.maoyan.com',
-    //       changeOrigin: true
-    //     }
-    //   }
 
   }
 }
