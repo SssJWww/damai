@@ -4,6 +4,7 @@ import damai91 from '@/views/damai91'
 import story from '@/views/story'
 import circle from '@/views/circle'
 import myself from '@/views/myself'
+import circleDetail from '@/views/circle_detail'
 
 Vue.use(VueRouter)
 
@@ -32,6 +33,9 @@ const routes = [
   {
     path: '/',
     redirect: '/main'
+  }, {
+    path: 'circle/detail/:myid',
+    component: circleDetail
   }
 
 ]
