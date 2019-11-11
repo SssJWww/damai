@@ -1,36 +1,36 @@
 <template>
   <div>
     <div class="header">达人圈</div>
-    <div class="main">
+    <div class="main" v-for="data in datalist" :key="data.id">
       <div class="margin">
-        <h4>性感bf风，拼接蕾丝卫衣</h4>
-        <p>天气冷了，搭配风衣外套穿也好看，衣袖是通透蕾丝镂空装饰的，轻灵唯美，令肌肤如影如现带来恰到好处的诱惑味道</p>
-        <div>
-          <img
-            src="https://img.alicdn.com/i1/197737313/O1CN01aZ4q6L23tOzazLo4D_!!197737313.jpg"
-            alt
-          />
-          <img
-            src="https://img.alicdn.com/i3/197737313/O1CN01L3f4Vd23tOzba8RJs_!!197737313.jpg"
-            alt
-          />
-          <img
-            src="https://img.alicdn.com/i2/197737313/O1CN01GVb5ws23tOzd9LqQ4_!!197737313.jpg"
-            alt
-          />
-          <img
-            src="https://img.alicdn.com/i1/197737313/O1CN01keL9m923tOzZUhyYE_!!197737313.jpg"
-            alt
-          />
+        <h4>{{data.title}}</h4>
+        <p>{{data.profile}}</p>
+        <div class="photo">
+          <img :src="item" alt v-for="(item,index) in data.quality_images" :key="index" />
         </div>
       </div>
     </div>
   </div>
 </template>
-<style lang="scss" scoped>
-body {
-  background-color: #ff0;
+<script>
+import Axios from 'axios'
+export default {
+  data () {
+    return {
+      datalist: [],
+      photolist: []
+    }
+  },
+  mounted () {
+    Axios.post('/api/goods/doyen', 'page_no: 1').then(res => {
+      //   console.log(res.data);
+      this.datalist = res.data.data.list
+      console.log(this.datalist)
+    })
+  }
 }
+</script>
+<style lang="scss" scoped>
 .header {
   height: 0.51rem;
   background-color: #ff4040;
@@ -38,22 +38,43 @@ body {
   line-height: 0.51rem;
   font-size: 0.2rem;
   color: #fff;
+  overflow: hidden;
 }
 .main {
   height: 1.93rem;
-  margin-top: 0.12rem;
+  margin-top: 0.15rem;
+  background-color: #fff;
   .margin {
     margin: 0 16px;
+    overflow: hidden;
     h4 {
       height: 0.32rem;
       width: 3.43rem;
-      font-size: 16px;
-      font-weight: 100;
+      font-size: 17px;
+      font-weight: 500;
+      background-color: #fff;
+      margin-top: 0.12rem;
     }
-    img {
-      width: 0.68rem;
+    p {
+      font-size: 13px;
+      background-color: #fff;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      height: 0.51rem;
+      width: 3.43rem;
+      line-height: 0.25rem;
+      color: #999;
+    }
+    .photo {
+      width: 3.43rem;
       height: 0.68rem;
-      float: left;
+      margin-top: 0.1rem;
+      img {
+        width: 0.68rem;
+        height: 0.68rem;
+        float: left;
+        margin-right: 0.17rem;
+      }
     }
   }
 }
