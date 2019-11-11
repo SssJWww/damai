@@ -33,6 +33,8 @@ p,
 figure {
   padding: 0;
   margin: 0;
+}
+body {
   background: #f5f5f5;
 }
 ul,
@@ -74,7 +76,7 @@ ul {
 .tab-color {
   color: #ff4040;
 }
-.peak{
+.peak {
   margin-bottom: 60px;
 }
 </style>
