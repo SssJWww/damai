@@ -34,7 +34,7 @@ const routes = [
     path: '/',
     redirect: '/main'
   }, {
-    path: 'circle/detail/:myid',
+    path: '/detail/:myid',
     component: circleDetail
   }
 
