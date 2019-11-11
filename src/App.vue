@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="peak">
     <router-view></router-view>
     <tabbar></tabbar>
   </div>
@@ -73,5 +73,8 @@ ul {
 }
 .tab-color {
   color: #ff4040;
+}
+.peak{
+  margin-bottom: 60px;
 }
 </style>
