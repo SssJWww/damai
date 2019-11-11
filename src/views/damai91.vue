@@ -31,10 +31,7 @@ export default {
     Swiper
   },
   mounted () {
-    Axios({
-      url: '/api/index/indexBanner',
-      methods: 'post'
-    }).then(res => {
+    Axios.post('/api/index/indexBanner', 'type=2').then(res => {
       console.log(res.data)
       this.datalist = res.data.data
     })
