@@ -98,21 +98,29 @@ export default {
     li {
       text-align: center;
       width: 93px;
-      height: 148px;
+      height: 150px;
       border-right: 1px solid #eee;
       border-bottom: 1px solid #eee;
-      background: white;
       img {
+        position: relative;
+        top:13px;
+        left:13px;
         width: 66px;
         height: 66px;
         border-radius: 50%;
       }
-    }
-    p {
-      background: white;
-    }
-    h3{
-      background:white;
+      p{
+        font-size:16px;
+        color:black;
+        position: relative;
+        top:15px;
+      }
+      h3{
+        font-size: 13px;
+        position: relative;
+        top:20px;
+        font-weight: 200;
+      }
     }
   }
 }
