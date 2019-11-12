@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="header">达人圈</div>
-    <div class="main" v-for="data in datalist" :key="data.id" :myid="data.id">
+    <div class="main" v-for="data in datalist" :key="data.id" :myid="data.id" @click="handleClick(data.id)">
       <div class="margin">
         <h4>{{data.title}}</h4>
         <p>{{data.profile}}</p>
@@ -27,6 +27,11 @@ export default {
       this.datalist = res.data.data.list
       console.log(this.datalist)
     })
+  },
+  methods: {
+    handleClick (id) {
+      this.$router.push(`/detail/${id}`)
+    }
   }
 }
 </script>
