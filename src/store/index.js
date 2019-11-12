@@ -4,20 +4,21 @@ import Axios from 'axios'
 
 Vue.use(Vuex)
 
-export default new Vuex.Store({
+const store = new Vuex.Store({
   state: {
     shoplist: [],
-    istabbarshow: true
+    istabbarshow: true,
+    isTabbarShow: true
   },
   mutations: {
+    showTabbar (state) {
+      state.isTabbarShow = true
+    },
+    hideTabbar (state) {
+      state.isTabbarShow = false
+    },
     getShopList (state, data) {
       state.shoplist = data
-    },
-    show (state) {
-      state.istabbarshow = true
-    },
-    hide (state) {
-      state.istabbarshow = false
     }
   },
   actions: {
@@ -33,3 +34,4 @@ export default new Vuex.Store({
   modules: {
   }
 })
+export default store

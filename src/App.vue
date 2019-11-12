@@ -1,7 +1,7 @@
 <template>
   <div class="peak">
     <router-view></router-view>
-    <tabbar v-show="this.$store.state.istabbarshow"></tabbar>
+    <tabbar v-if="isShow"></tabbar>
   </div>
 </template>
 
@@ -14,6 +14,11 @@ export default {
   },
   components: {
     tabbar
+  },
+  computed: {
+    isShow () {
+      return this.$store.state.isTabbarShow
+    }
   }
 }
 </script>

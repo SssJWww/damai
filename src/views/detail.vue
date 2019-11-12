@@ -2,9 +2,7 @@
   <div>
     <swiper :options="option" :key="datalist.length">
       <div class="swiper-slide" v-for="data in datalist" :key="data.id">
-          <div>
-
-          </div>
+        <div></div>
       </div>
     </swiper>
   </div>
@@ -44,10 +42,15 @@ export default {
       this.datalist = res.data
       this.piclist = res.data.data
     })
+  },
+  beforeMount () {
+    this.$store.commit('hideTabbar')
+  },
+  beforeDestroy () {
+    this.$store.commit('showTabbar')
   }
 }
 </script>
 
 <style lang="scss" scoped>
-
 </style>
