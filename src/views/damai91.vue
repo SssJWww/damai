@@ -1,18 +1,20 @@
 <template>
   <div>
     <headerbar></headerbar>
-    <swiper :options="option" :key="datalist.length" class="option" classname="option">
-      <div class="swiper-slide" v-for="data in datalist" :key="data.id">
-        <img :src="data.img_path" alt />
+    <swiper :options="option" :key="datalist.length" class="option">
+      <div class="swiper-slide" v-for="(data,index) in datalist" :key="index">
+        <!-- <div class="red"></div> -->
+        <img :src="data.img_path" class="LB" />
       </div>
     </swiper>
     <shopnav></shopnav>
-    <newbar>
-      <img src="/img/todaynew.png" alt />
-      <swiper :options="newoption" :key="datalist2.length" class="newoption" classname="newoption">
-        <div class="swiper-slide" v-for="(data,index) in datalist2" :key="index"></div>
-      </swiper>
-    </newbar>
+    <newbar></newbar>
+    <swiper :options="newoption" class="newoption" :if="datalist2.length">
+
+      <div class="swiper-slide" v-for="(data,index) in datalist2" :key="index">
+        <!-- <div class="swiper-lazy-preloader"></div> -->
+        {{data.title}}</div>
+    </swiper>
 
     <imgbar></imgbar>
     <discounts></discounts>
@@ -83,8 +85,36 @@ export default {
     Axios.post('/api/index/newsList', 'type=2').then(res => {
       // console.log(res.data)
       this.datalist2 = res.data.data
-      // console.log(this.datalist2)
+      console.log(this.datalist2)
     })
   }
 }
 </script>
+<style lang="scss" scoped>
+.option {
+  margin-top: 0.53rem;
+}
+.LB {
+  width: 3.59rem;
+  height: 1.76rem;
+  overflow: hidden;
+  border-radius: 0.1rem;
+  margin-left: 0.08rem;
+}
+.newoption {
+  height: 0.19rem;
+  position: absolute;
+  top: 3.41rem;
+  left: 1.4rem;
+}
+// .red{
+//   height: 0.16rem;
+//   background: #fe0036;
+//   border-radius: 0 0 100% 100%;
+//   position: absolute;
+//   top: 2rem;
+//   left: 0rem;
+//   width: 100%;
+//   // z-index:;
+// }
+</style>

@@ -1,6 +1,6 @@
 <template>
   <div class="all">
-    <div class="header">
+    <div class="headers">
       <p class="nine">为您推荐</p>
       <p class="JX">· 超级实惠 实时更新</p>
       <span>更多 ></span>
@@ -41,7 +41,7 @@ export default {
   position: relative;
   top: 4.4rem;
   left: 0rem;
-  .header {
+  .headers {
     height: 0.49rem;
     background: white;
     img {

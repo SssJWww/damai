@@ -10,7 +10,11 @@
     height: .52rem;
     background: #ff4040;
     line-height: .49rem;
-    position: relative;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    top: 0rem;
+    left: 0rem;
 }
     .suoSou{
         height: 0.38rem;

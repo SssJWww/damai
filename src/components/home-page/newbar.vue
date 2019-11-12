@@ -1,6 +1,6 @@
 <template>
   <div class="all">
-
+    <img src="/img/fast.png" alt />
   </div>
 </template>
 <script>
@@ -8,18 +8,7 @@
 export default {
   data () {
     return {
-      datalist2: [],
-      // components: {
-      //   Swiper
-      // },
-      newoption: {
-        direction: 'vertical',
-        loop: true,
-        autoplay: {
-          delay: 1000,
-          disableOnInteraction: false
-        }
-      }
+      datalist2: []
     }
   },
   mounted () {
@@ -39,5 +28,8 @@ export default {
     top: 0.15rem;
     left: 0.2rem;
   }
+}
+.newoption{
+  height: 0.19rem;
 }
 </style>

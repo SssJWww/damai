@@ -1,6 +1,6 @@
 <template>
   <div class="all">
-    <div class="header">
+    <div class="headers">
       <p class="nine">9.9超值专区</p>
       <p class="JX">每日精选 全场包邮</p>
       <span>更多 ></span>
@@ -39,7 +39,7 @@ export default {
   position: relative;
   top: 4.2rem;
   left: 0rem;
-  .header {
+  .headers {
     height: 0.49rem;
     img {
       position: absolute;

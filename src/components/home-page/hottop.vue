@@ -1,6 +1,6 @@
 <template>
   <div class="all">
-    <div class="header">
+    <div class="headers">
       <img src="/img/brandTitleTxt.fb9ffa1b.png" alt />
       <span>更多 ></span>
     </div>
@@ -39,7 +39,7 @@ export default {
   position: relative;
   top: 4rem;
   left: 0rem;
-  .header {
+  .headers {
     height: 0.49rem;
     img {
       position: absolute;
