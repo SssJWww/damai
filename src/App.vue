@@ -14,6 +14,11 @@ export default {
   },
   components: {
     tabbar
+  },
+  computed: {
+    isShow () {
+      return this.$store.state.isTabbarShow
+    }
   }
 }
 </script>

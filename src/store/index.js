@@ -4,7 +4,7 @@ import Axios from 'axios'
 
 Vue.use(Vuex)
 
-export default new Vuex.Store({
+const store = new Vuex.Store({
   state: {
     shoplist: [],
     istabbarshow: true
@@ -33,3 +33,4 @@ export default new Vuex.Store({
   modules: {
   }
 })
+export default store

@@ -1,7 +1,7 @@
 <template>
   <div class="detail">
     <div class="header">
-      <span class="iconfont icon-back"></span>
+      <span class="iconfont icon-back" @click="handleBack()"></span>
       达人圈详情
     </div>
     <div class="white">
@@ -10,7 +10,7 @@
           <h5>{{this.title}}</h5>
           <p class="time">{{this.time}}</p>
           <p class="border"></p>
-          <div v-html="this.conent" class="conent"></div>
+          <div v-html="this.conent" id="conent"></div>
         </div>
       </div>
     </div>
@@ -45,6 +45,20 @@
         </div>
       </div>
     </div>
+    <div class="recommend">
+      <h3>达人推荐</h3>
+      <ul>
+        <li v-for="data in detaillist" :key="data.id">
+          <div class="lr">
+            <div class="recommend_border">
+              <img :src="data.cover_image" alt />
+              <h4>{{data.title}}</h4>
+              <p>{{data.updated_at_str}}</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 <script>
@@ -55,22 +69,48 @@ export default {
       title: null,
       time: null,
       conent: null,
-      datalist: []
+      datalist: [],
+      detaillist: []
     }
   },
   mounted () {
-    Axios.post('/api/goods/doyenDetail', 'id=929').then(res => {
-      console.log(res.data)
-      this.title = res.data.data.title
-      this.time = res.data.data.created_at_str
-      this.conent = res.data.data.content
-      this.datalist = res.data.data.user_badge_list
-      console.log(this.datalist)
-    })
+    Axios.post('/api/goods/doyenDetail', `id=${this.$route.params.myid}`).then(
+      res => {
+        console.log(res.data)
+        this.title = res.data.data.title
+        this.time = res.data.data.created_at_str
+        this.conent = res.data.data.content
+        this.datalist = res.data.data.user_badge_list
+        console.log(this.datalist)
+      }
+    )
+    Axios.post('api/goods/doyenOther', `id=${this.$route.params.myid}`).then(
+      res => {
+        console.log(res.data)
+        this.detaillist = res.data.data
+      }
+    )
+  },
+  beforeMount () {
+    this.$store.commit('hideTabbar')
+  },
+  beforeDestroy () {
+    this.$store.commit('showTabbar')
+  },
+  watch: {
+    $route: 'fetchData'
+  },
+  methods: {
+    fetchData () {
+      console.log(this.$route.params.myid)
+    },
+    handleBack () {
+      this.$router.back()
+    }
   }
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 .header {
   height: 0.52rem;
   line-height: 0.52rem;
@@ -79,6 +119,7 @@ export default {
   background-color: #fff;
   position: fixed;
   overflow: hidden;
+  z-index: 999;
   top: 0;
   left: 0;
   width: 100%;
@@ -118,7 +159,7 @@ export default {
         height: 0.12rem;
         border-bottom: 1px dashed #ccc;
       }
-      .conent {
+      #conent {
         background-color: #fff;
         img {
           width: 3.43rem !important;
@@ -232,10 +273,70 @@ export default {
           color: #ff4040;
           font-weight: 500;
         }
-        .i3{
-            margin-left: .75rem;
-            font-size: 12px;
-            color: #999
+        .i3 {
+          margin-left: 0.75rem;
+          font-size: 12px;
+          color: #999;
+        }
+      }
+    }
+  }
+}
+.recommend {
+  margin-top: 0.15rem;
+  h3 {
+    height: 0.46rem;
+    line-height: 0.46rem;
+    color: #ff4040;
+    padding-left: 0.2rem;
+    background-color: #fff;
+    font-weight: 100;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+  }
+  ul {
+    li {
+      height: 1.2rem;
+      background-color: #fff;
+      padding: 10px;
+      padding: 0.16rem 0;
+      .lr {
+        height: 0.88rem;
+        width: 3.59rem;
+        margin-left: 0.08rem;
+        margin-right: 0.08rem;
+        .recommend_border {
+          border: 1px solid #eee;
+          height: 3.61rem;
+          height: 0.88rem;
+          padding: 0.1rem 0;
+          position: relative;
+          img {
+            width: 0.67rem;
+            height: 0.67rem;
+            margin-left: 0.1rem;
+          }
+          h4 {
+            position: absolute;
+            top: 0.1rem;
+            left: 0.9rem;
+            height: 0.32rem;
+            width: 2.53rem;
+            font-size: 16px;
+            color: #000;
+            font-weight: 400;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+          p {
+            width: 2.53rem;
+            height: 0.2rem;
+            position: absolute;
+            top: 0.4rem;
+            left: 0.9rem;
+            font-size: 16px;
+          }
         }
       }
     }
