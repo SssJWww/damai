@@ -1,7 +1,7 @@
 <template>
   <div>
     <headerbar></headerbar>
-    <swiper :options="option" :key="datalist.length" class="option">
+    <swiper :options="option" :key="datalist.length" class="option" classname="option">
       <div class="swiper-slide" v-for="(data,index) in datalist" :key="index">
         <!-- <div class="red"></div> -->
         <img :src="data.img_path" class="LB" />
@@ -9,12 +9,11 @@
     </swiper>
     <shopnav></shopnav>
     <newbar></newbar>
-    <swiper :options="newoption" class="newoption" :if="datalist2.length">
-
+    <!-- <swiper :options="newoption" class="newoption" :if="datalist2.length" classanme="newoption">
       <div class="swiper-slide" v-for="(data,index) in datalist2" :key="index">
-        <!-- <div class="swiper-lazy-preloader"></div> -->
-        {{data.title}}</div>
-    </swiper>
+        {{data.title}}
+      </div>
+    </swiper> -->
 
     <imgbar></imgbar>
     <discounts></discounts>
@@ -106,6 +105,9 @@ export default {
   position: absolute;
   top: 3.41rem;
   left: 1.4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 // .red{
 //   height: 0.16rem;
