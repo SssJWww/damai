@@ -27,10 +27,6 @@ const routes = [
     component: myself
   },
   {
-    path: '*',
-    redirect: '/main'
-  },
-  {
     path: '/',
     redirect: '/main'
   }, {

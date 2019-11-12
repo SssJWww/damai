@@ -11,11 +11,18 @@
     <div class="super-story">
       <ul>
         <li v-for="data in datalist" :key="data.id">
+          <a :href="data.url"></a>
           <img :src="data.logo" alt />
           <p>{{data.name}}</p>
           <h3>{{data.describe}}</h3>
         </li>
       </ul>
+    </div>
+    <div class="rank">
+      <img src="/images/bannerRank.jpg" alt />
+    </div>
+    <div class="buy">
+      <img src="/images/bannerBuy.jpg" alt />
     </div>
   </div>
 </template>
@@ -103,25 +110,45 @@ export default {
       border-bottom: 1px solid #eee;
       img {
         position: relative;
-        top:13px;
-        left:13px;
+        top: 13px;
+        left: 13px;
         width: 66px;
         height: 66px;
         border-radius: 50%;
       }
-      p{
-        font-size:16px;
-        color:black;
+      p {
+        font-size: 16px;
+        color: black;
         position: relative;
-        top:15px;
+        top: 15px;
       }
-      h3{
+      h3 {
         font-size: 13px;
         position: relative;
-        top:20px;
+        top: 20px;
         font-weight: 200;
       }
+      a {
+        display: block;
+        width: 93px;
+        height: 150px;
+        position: absolute;
+      }
     }
+  }
+}
+.rank {
+  margin-top: 15px;
+  width: 375px;
+  img {
+    width: 100%;
+  }
+}
+.buy {
+  margin-top: 15px;
+  width: 375px;
+  img {
+    width: 100%;
   }
 }
 </style>
