@@ -5,7 +5,10 @@ import story from '@/views/story'
 import circle from '@/views/circle'
 import myself from '@/views/myself'
 import circleDetail from '@/views/circle_detail'
-
+import damaiHot from '@/views/damaiHot'
+import damaiLight from '@/views/damailight'
+import detail from '@/views/detail'
+import goodDetail from '@/views/goodDetail'
 Vue.use(VueRouter)
 
 const routes = [
@@ -29,9 +32,26 @@ const routes = [
   {
     path: '/',
     redirect: '/main'
-  }, {
+  },
+  {
     path: '/detail/:myid',
     component: circleDetail
+  },
+  {
+    path: '/hotshop',
+    component: damaiHot
+  },
+  {
+    path: '/lightshop',
+    component: damaiLight
+  },
+  {
+    path: '/hotshop/:myid',
+    component: detail
+  },
+  {
+    path: '/goodDetail/:myid',
+    component: goodDetail
   }
 
 ]
