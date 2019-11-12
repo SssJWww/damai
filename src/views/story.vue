@@ -18,11 +18,8 @@
         </li>
       </ul>
     </div>
-    <div class="rank">
+    <div class="rank" @click="handleRank()">
       <img src="/images/bannerRank.jpg" alt />
-    </div>
-    <div class="buy">
-      <img src="/images/bannerBuy.jpg" alt />
     </div>
   </div>
 </template>
@@ -40,6 +37,11 @@ export default {
       console.log(res.data.data)
       this.datalist = res.data.data
     })
+  },
+  methods: {
+    handleRank () {
+      this.$router.push('/hotshop')
+    }
   }
 }
 </script>
@@ -138,13 +140,6 @@ export default {
   }
 }
 .rank {
-  margin-top: 15px;
-  width: 375px;
-  img {
-    width: 100%;
-  }
-}
-.buy {
   margin-top: 15px;
   width: 375px;
   img {
