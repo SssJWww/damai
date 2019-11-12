@@ -45,19 +45,21 @@
         </div>
       </div>
     </div>
-    <div class="recommend">
-      <h3>达人推荐</h3>
-      <ul>
-        <li v-for="data in detaillist" :key="data.id">
-          <div class="lr">
-            <div class="recommend_border">
-              <img :src="data.cover_image" alt />
-              <h4>{{data.title}}</h4>
-              <p>{{data.updated_at_str}}</p>
+    <div class="bigbox">
+      <div class="recommend">
+        <h3>达人推荐</h3>
+        <ul>
+          <li v-for="data in detaillist" :key="data.id">
+            <div class="lr">
+              <div class="recommend_border">
+                <img :src="data.cover_image" alt />
+                <h4>{{data.title}}</h4>
+                <p>{{data.updated_at_str}}</p>
+              </div>
             </div>
-          </div>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -169,7 +171,6 @@ export default {
   }
 }
 .list {
-  height: 1.89rem;
   margin-top: 0.15rem;
   h3 {
     height: 0.46rem;
@@ -182,7 +183,6 @@ export default {
     border-top: 1px solid #eee;
   }
   .setion {
-    height: 1.42rem;
     position: relative;
     background-color: #fff;
     padding: 0.15rem;
@@ -282,60 +282,62 @@ export default {
     }
   }
 }
-.recommend {
+.bigbox {
   margin-top: 0.15rem;
-  h3 {
-    height: 0.46rem;
-    line-height: 0.46rem;
-    color: #ff4040;
-    padding-left: 0.2rem;
-    background-color: #fff;
-    font-weight: 100;
-    border-bottom: 1px solid #eee;
-    border-top: 1px solid #eee;
-  }
-  ul {
-    li {
-      height: 1.2rem;
+  .recommend {
+    h3 {
+      height: 0.46rem;
+      line-height: 0.46rem;
+      color: #ff4040;
+      padding-left: 0.2rem;
       background-color: #fff;
-      padding: 10px;
-      padding: 0.16rem 0;
-      .lr {
-        height: 0.88rem;
-        width: 3.59rem;
-        margin-left: 0.08rem;
-        margin-right: 0.08rem;
-        .recommend_border {
-          border: 1px solid #eee;
-          height: 3.61rem;
+      font-weight: 100;
+      border-bottom: 1px solid #eee;
+      border-top: 1px solid #eee;
+    }
+    ul {
+      li {
+        height: 1.2rem;
+        background-color: #fff;
+        padding: 10px;
+        padding: 0.16rem 0;
+        .lr {
           height: 0.88rem;
-          padding: 0.1rem 0;
-          position: relative;
-          img {
-            width: 0.67rem;
-            height: 0.67rem;
-            margin-left: 0.1rem;
-          }
-          h4 {
-            position: absolute;
-            top: 0.1rem;
-            left: 0.9rem;
-            height: 0.32rem;
-            width: 2.53rem;
-            font-size: 16px;
-            color: #000;
-            font-weight: 400;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-          }
-          p {
-            width: 2.53rem;
-            height: 0.2rem;
-            position: absolute;
-            top: 0.4rem;
-            left: 0.9rem;
-            font-size: 16px;
+          width: 3.59rem;
+          margin-left: 0.08rem;
+          margin-right: 0.08rem;
+          .recommend_border {
+            border: 1px solid #eee;
+            height: 3.61rem;
+            height: 0.88rem;
+            padding: 0.1rem 0;
+            position: relative;
+            img {
+              width: 0.67rem;
+              height: 0.67rem;
+              margin-left: 0.1rem;
+            }
+            h4 {
+              position: absolute;
+              top: 0.1rem;
+              left: 0.9rem;
+              height: 0.32rem;
+              width: 2.53rem;
+              font-size: 16px;
+              color: #000;
+              font-weight: 400;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+            p {
+              width: 2.53rem;
+              height: 0.2rem;
+              position: absolute;
+              top: 0.4rem;
+              left: 0.9rem;
+              font-size: 16px;
+            }
           }
         }
       }
