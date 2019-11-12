@@ -21,9 +21,6 @@
     <div class="rank" @click="handleRank()">
       <img src="/images/bannerRank.jpg" alt />
     </div>
-    <div class="buy" @click="handlebuy()">
-      <img src="/images/bannerBuy.jpg" alt />
-    </div>
   </div>
 </template>
 
@@ -44,11 +41,14 @@ export default {
   methods: {
     handleRank () {
       this.$router.push('/hotshop')
-    },
-    handlebuy () {
-      this.$router.push('/lightshop')
     }
   }
+  // beforeMount(){
+  //   this.$store.commit("hide")
+  // },
+  // beforeDestroy(){
+  //   this.$store.commit("show")
+  // }
 }
 </script>
 
@@ -146,13 +146,6 @@ export default {
   }
 }
 .rank {
-  margin-top: 15px;
-  width: 375px;
-  img {
-    width: 100%;
-  }
-}
-.buy {
   margin-top: 15px;
   width: 375px;
   img {

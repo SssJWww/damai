@@ -7,7 +7,8 @@ import myself from '@/views/myself'
 import circleDetail from '@/views/circle_detail'
 import damaiHot from '@/views/damaiHot'
 import damaiLight from '@/views/damailight'
-
+import detail from '@/views/detail'
+import goodDetail from '@/views/goodDetail'
 Vue.use(VueRouter)
 
 const routes = [
@@ -43,6 +44,14 @@ const routes = [
   {
     path: '/lightshop',
     component: damaiLight
+  },
+  {
+    path: '/hotshop/:myid',
+    component: detail
+  },
+  {
+    path: '/goodDetail/:myid',
+    component: goodDetail
   }
 
 ]

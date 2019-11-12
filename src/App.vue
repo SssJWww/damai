@@ -1,13 +1,17 @@
 <template>
   <div class="peak">
     <router-view></router-view>
-    <tabbar></tabbar>
+    <tabbar v-show="this.$store.state.istabbarshow"></tabbar>
   </div>
 </template>
 
 <script>
 import tabbar from '@/components/tabbar'
 export default {
+  data () {
+    return {
+    }
+  },
   components: {
     tabbar
   }
