@@ -26,7 +26,7 @@ export default {
   },
   mounted () {
     Axios.post('/api/goods/indexGoodsTop', 'limit=3').then(res => {
-      console.log(res.data.data.nine)
+      // console.log(res.data.data.nine)
       this.datalist = res.data.data.nine
     })
   }

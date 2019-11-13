@@ -84,7 +84,7 @@ export default {
     Axios.post('/api/index/newsList', 'type=2').then(res => {
       // console.log(res.data)
       this.datalist2 = res.data.data
-      console.log(this.datalist2)
+      // console.log(this.datalist2)
     })
   }
 }

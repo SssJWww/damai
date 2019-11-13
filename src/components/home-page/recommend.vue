@@ -34,20 +34,20 @@ export default {
   },
   mounted () {
     Axios.post('/api/goods/goodsList', 'page_num=1&page_size=100').then(res => {
-      console.log(res.data.data.list)
+      // console.log(res.data.data.list)
       this.datalist = res.data.data.list
       this.total = res.data.data.page_size
     })
   },
   methods: {
     moreclick () {
-      console.log('点击了')
+      // console.log('点击了')
       this.current++
       if (this.datalist === this.datalist.length) {
         return
       }
       Axios.post('/api/goods/goodsList', `page_num=${this.current}&page_size=100`).then(res => {
-        console.log(res.data.data.list)
+        // console.log(res.data.data.list)
         this.datalist = [...this.datalist, ...res.data.data.list]
       })
     }
