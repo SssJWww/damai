@@ -21,6 +21,8 @@ export default {
   background: white;
   margin-top: 0.01rem;
   position: relative;
+  top: 0rem;
+  left: 0rem;
   img {
     height: 0.24rem;
     width: 0.7rem;

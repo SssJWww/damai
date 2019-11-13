@@ -24,10 +24,16 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+div{
+  height: 2.52rem;
+    margin-top: 0.01rem;
+
+}
 ul{
     position: relative;
-    top: 1.3rem;
+    top: 0rem;
     left: 0rem;
+    margin-top:1px
 }
     img{
         height: 1.25rem;
