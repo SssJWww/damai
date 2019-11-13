@@ -7,7 +7,7 @@
     <ul>
       <li v-for="data in datalist" :key="data.id">
         <img :src="data.pict_url" alt />
-        <p class="guide">{{data.guide_content}}</p>
+        <p class="guide">{{data.title}}</p>
         <p class="price">￥{{data.coupon_after_price}}</p>
         <p class="volume">月销 {{data.volume}}</p>
         <p class="iconfont icon-discount QQ">{{data.coupon_discount}}元券</p>
@@ -80,6 +80,10 @@ export default {
         height: 0.28rem;
         overflow: hidden;
         margin-left: 0.1rem;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
       }
       .guide{
         margin-top: 0.2rem;
@@ -91,7 +95,7 @@ export default {
       }
        .QQ{
           height: 0.25rem;
-          width: 0.54rem;
+          width: 0.6rem;
           background: #fe0036;
                     line-height: 0.26rem;
           color: white

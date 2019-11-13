@@ -16,6 +16,10 @@
         <p class="return">返{{data.reward_amount}}元</p>
       </li>
     </ul>
+    <div  class="more">
+
+    <p @click="moreclick"> 加载更多</p>
+    </div>
   </div>
 </template>
 <script>
@@ -23,17 +27,34 @@ import Axios from 'axios'
 export default {
   data () {
     return {
-      datalist: []
+      datalist: [],
+      total: 0,
+      current: 1
     }
   },
   mounted () {
     Axios.post('/api/goods/goodsList', 'page_num=1&page_size=100').then(res => {
       console.log(res.data.data.list)
       this.datalist = res.data.data.list
+      this.total = res.data.data.page_size
     })
+  },
+  methods: {
+    moreclick () {
+      console.log('点击了')
+      this.current++
+      if (this.datalist === this.datalist.length) {
+        return
+      }
+      Axios.post('/api/goods/goodsList', `page_num=${this.current}&page_size=100`).then(res => {
+        console.log(res.data.data.list)
+        this.datalist = [...this.datalist, ...res.data.data.list]
+      })
+    }
   }
 }
 </script>
+
 <style lang="scss" scoped>
 .all {
   height: 3.12rem;
@@ -72,6 +93,19 @@ export default {
     .JX {
       color: #999;
       margin-left: 0.1rem;
+    }
+  }
+  .more{
+    height: 1.5rem;
+    text-align: center;
+    p{
+      height: .5rem;
+      width: 1.89rem;
+      border-radius:1.5rem ;
+      border: 0.01rem solid #ccc ;
+          line-height: .5rem;
+          margin: .4rem auto;
+
     }
   }
   ul {
