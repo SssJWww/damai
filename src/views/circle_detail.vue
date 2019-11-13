@@ -17,7 +17,7 @@
     <div class="list">
       <h3>达人清单</h3>
       <div class="setion">
-        <div class="sample" v-for="data in datalist" :key="data.id">
+        <div class="sample" v-for="data in datalist" :key="data.id" @click="handleClick(data.id)">
           <img :src="data.pict_url" class="list_img" />
           <p class="list_title">{{data.title}}</p>
           <p class="price">
@@ -49,7 +49,7 @@
       <div class="recommend">
         <h3>达人推荐</h3>
         <ul>
-          <li v-for="data in detaillist" :key="data.id">
+          <li v-for="data in detaillist" :key="data.id" @click="handleNew(data.id)">
             <div class="lr">
               <div class="recommend_border">
                 <img :src="data.cover_image" alt />
@@ -78,37 +78,62 @@ export default {
   mounted () {
     Axios.post('/api/goods/doyenDetail', `id=${this.$route.params.myid}`).then(
       res => {
-        console.log(res.data)
+        // console.log(res.data)
         this.title = res.data.data.title
         this.time = res.data.data.created_at_str
         this.conent = res.data.data.content
         this.datalist = res.data.data.user_badge_list
-        console.log(this.datalist)
+        // console.log(this.datalist)
       }
     )
-    Axios.post('api/goods/doyenOther', `id=${this.$route.params.myid}`).then(
+    Axios.post('/api/goods/doyenOther', `id=${this.$route.params.myid}`).then(
       res => {
-        console.log(res.data)
+        // console.log(res.data)
         this.detaillist = res.data.data
       }
     )
+    this.$store.commit('hideTabbar')
   },
   beforeMount () {
-    this.$store.commit('hideTabbar')
+    // console.log('circle_detail_mount')
   },
   beforeDestroy () {
     this.$store.commit('showTabbar')
+    // console.log('circle_detail_destory')
   },
   watch: {
     $route: 'fetchData'
   },
   methods: {
-
     fetchData () {
-      console.log(this.$route.params.myid)
+      // console.log(this.$route.params.myid,'aaaaaaaaaa')
+      Axios.post('/api/goods/doyenOther', `id=${this.$route.params.myid}`).then(
+        res => {
+          // console.log(res.data)
+          this.detaillist = res.data.data
+        }
+      )
+      Axios.post(
+        '/api/goods/doyenDetail',
+        `id=${this.$route.params.myid}`
+      ).then(res => {
+        // console.log(res.data)
+        this.title = res.data.data.title
+        this.time = res.data.data.created_at_str
+        this.conent = res.data.data.content
+        this.datalist = res.data.data.user_badge_list
+        // console.log(this.datalist)
+      })
     },
     handleBack () {
       this.$router.back()
+    },
+    handleClick (id) {
+      this.$router.push(`/goodDetail/${id}`)
+    },
+    handleNew (id) {
+      console.log(id)
+      this.$router.push(`/detail/${id}`)
     }
   }
 }

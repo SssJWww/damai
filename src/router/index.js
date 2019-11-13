@@ -53,7 +53,6 @@ const routes = [
     path: '/goodDetail/:myid',
     component: goodDetail
   }
-
 ]
 
 const router = new VueRouter({
