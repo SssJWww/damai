@@ -1,6 +1,6 @@
 <template>
   <div>
-    <headerbar></headerbar>
+    <headerbar ></headerbar>
     <swiper :options="option" :key="datalist.length" class="option" classname="option">
       <div class="swiper-slide" v-for="(data,index) in datalist" :key="index">
         <!-- <div class="red"></div> -->
@@ -84,7 +84,7 @@ export default {
     Axios.post('/api/index/newsList', 'type=2').then(res => {
       // console.log(res.data)
       this.datalist2 = res.data.data
-      console.log(this.datalist2)
+      // console.log(this.datalist2)
     })
   }
 }

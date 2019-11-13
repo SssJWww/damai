@@ -9,6 +9,7 @@ import damaiHot from '@/views/damaiHot'
 import damaiLight from '@/views/damailight'
 import detail from '@/views/detail'
 import goodDetail from '@/views/goodDetail'
+import City from '@/views/city'
 Vue.use(VueRouter)
 
 const routes = [
@@ -52,6 +53,10 @@ const routes = [
   {
     path: '/goodDetail/:myid',
     component: goodDetail
+  },
+  {
+    path: '/city',
+    component: City
   }
 ]
 

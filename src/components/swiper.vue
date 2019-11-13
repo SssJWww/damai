@@ -26,6 +26,17 @@ export default {
 <style lang="scss" scoped>
 .swiper-pagination {
   text-align: center;
+  width:50px;
+  height:50px;
+  line-height: 50px;
+  font-size: 18px;
+  background:#333;
+  opacity: .6;
+  position: absolute;
+  color:white;
+  border-radius: 50%;
+  top:300px;
+  left:300px;
 }
 img {
   width: 100%;
