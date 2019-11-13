@@ -23,7 +23,7 @@ const store = new Vuex.Store({
   },
   actions: {
     getList (store) {
-      Axios.post('/api/goods/goodsReal', 'page_size: 10').then(res => {
+      Axios.post('/api/goods/goodsReal', 'page_size=100').then(res => {
         console.log(res.data.data)
         console.log(res.data)
         store.commit('getShopList', res.data.data.list)

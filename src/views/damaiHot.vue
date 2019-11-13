@@ -34,6 +34,7 @@ export default {
     } else {
       console.log('使用缓存数据')
     }
+    this.$store.commit('hideTabbar')
   },
   methods: {
     handleBack () {
@@ -43,10 +44,8 @@ export default {
       this.$router.push(`/hotshop/${id}`)
     }
   },
-  beforeMount () {
-    this.$store.commit('hideTabbar')
-  },
   beforeDestroy () {
+    console.log('hot2')
     this.$store.commit('showTabbar')
   }
 }
