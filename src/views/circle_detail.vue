@@ -103,6 +103,7 @@ export default {
     $route: 'fetchData'
   },
   methods: {
+
     fetchData () {
       console.log(this.$route.params.myid)
     },

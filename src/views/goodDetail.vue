@@ -1,5 +1,5 @@
 <template>
     <div>
-        good detail
+        goodDetail
     </div>
 </template>
