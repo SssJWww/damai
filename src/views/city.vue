@@ -14,7 +14,7 @@
         <button>搜索</button>
         <p class="word">新手小白一点通</p>
         <a href>
-          <img src="/img/guideTo.ed883d14.png" alt />
+          <img src="/img/guideTo.ed883d14.png" @click="clickJump()" />
         </a>
 
         <ul>
@@ -58,6 +58,9 @@ export default {
     })
   },
   methods: {
+    clickJump () {
+      this.$router.push('/rule')
+    },
     backclick () {
       this.$router.go(-1)
     },

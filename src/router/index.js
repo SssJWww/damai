@@ -10,6 +10,10 @@ import damaiLight from '@/views/damailight'
 import detail from '@/views/detail'
 import goodDetail from '@/views/goodDetail'
 import City from '@/views/city'
+import Super from '@/views/super'
+import All from '@/views/all'
+import Rule from '@/views/rule'
+import mytext from '@/views/mytext'
 Vue.use(VueRouter)
 
 const routes = [
@@ -57,6 +61,22 @@ const routes = [
   {
     path: '/city',
     component: City
+  },
+  {
+    path: '/super',
+    component: Super
+  },
+  {
+    path: '/all',
+    component: All
+  },
+  {
+    path: '/rule',
+    component: Rule
+  },
+  {
+    path: '/:mytext',
+    component: mytext
   }
 ]
 
