@@ -1,7 +1,13 @@
 <template>
   <div>
     <div class="header">达人圈</div>
-    <div class="main" v-for="data in datalist" :key="data.id" :myid="data.id" @click="handleClick(data.id)">
+    <div
+      class="main"
+      v-for="data in datalist"
+      :key="data.id"
+      :myid="data.id"
+      @click="handleClick(data.id)"
+    >
       <div class="margin">
         <h4>{{data.title}}</h4>
         <p>{{data.profile}}</p>
@@ -9,6 +15,9 @@
           <img :src="item" alt v-for="(item,index) in data.quality_images" :key="index" />
         </div>
       </div>
+    </div>
+    <div class="more">
+      <button @click="handleMore()" ref="bottom">点击加载更多</button>
     </div>
   </div>
 </template>
@@ -18,11 +27,12 @@ export default {
   data () {
     return {
       datalist: [],
-      photolist: []
+      photolist: [],
+      num: 1
     }
   },
   mounted () {
-    Axios.post('/api/goods/doyen', 'page_no: 1').then(res => {
+    Axios.post('/api/goods/doyen', `page_no=1`).then(res => {
       //   console.log(res.data);
       this.datalist = res.data.data.list
       console.log(this.datalist)
@@ -31,6 +41,37 @@ export default {
   methods: {
     handleClick (id) {
       this.$router.push(`/detail/${id}`)
+    },
+    handleMore () {
+      this.num++
+      Axios.post('/api/goods/doyen', `page_no=${this.num}`).then(res => {
+        console.log(res.data)
+        this.datalist = [...this.datalist, ...res.data.data.list]
+        // console.log(res.data.data.cur_page)
+        // console.log(res.data.data.page_count)
+        // console.log(this.$refs.bottom)
+        if (res.data.data.cur_page === res.data.data.page_count) {
+          this.$refs.bottom.innerHTML = '到底了'
+          this.$refs.bottom.disabled = true
+        }
+      })
+      // 第二种方法
+      //     Axios.post('/api/goods/doyen', {
+      //   page_no: `${this.num}`
+      // })
+      // .then(function (response) {
+      //   console.log(response);
+      // })
+      // 第三种方法
+      // Axios({
+      //   url:'/api/goods/doyen',
+      //   method:'POST',
+      //   data:{
+      //     page_no:`${this.num}`
+      //   }
+      // }).then((res)=>{
+      //   console.log(res,555555555)
+      // })
     }
   }
 }
@@ -81,6 +122,29 @@ export default {
         margin-right: 0.17rem;
       }
     }
+  }
+}
+.more {
+  height: 1.1rem;
+  width: 3.59rem;
+  background-color: #f5f5f5;
+  position: relative;
+  button {
+    height: 0.5rem;
+    width: 1.81rem;
+    text-align: center;
+    line-height: 0.5rem;
+    display: block;
+    background-color: #fff;
+    border-radius: 1.2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -0.25rem;
+    margin-left: -0.9rem;
+    font-size: 16px;
+    color: #999;
+    outline: none;
   }
 }
 </style>
