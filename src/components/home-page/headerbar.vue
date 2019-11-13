@@ -1,7 +1,7 @@
 <template>
     <div class="box">
         <input type="text" class="suoSou" placeholder="输入商品名称或输入宝贝标题">
-        <span class="daoHang iconfont icon-viewlist"></span>
+        <!-- <span class="daoHang iconfont icon-viewlist"></span> -->
         <span class="FD iconfont icon-search"></span>
     </div>
 </template>
@@ -18,11 +18,11 @@
 }
     .suoSou{
         height: 0.38rem;
-        width: 3.08rem;
+        width: 3.45rem;
         border-radius:1.2rem;
         outline:none;
         border: 0;
-       margin-left: 0.1rem;
+       margin-left: 0.15rem;
        padding-left: .4rem;
        font-size: 16px;
        background-color: white ;
