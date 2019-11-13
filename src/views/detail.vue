@@ -1,8 +1,8 @@
 <template>
   <div>
-    <swiper :options="option" :key="datalist.length">
-      <div class="swiper-slide" v-for="data in datalist" :key="data.id">
-        <div></div>
+    <swiper :options="option" :key="piclist.length">
+      <div class="swiper-slide" v-for="(data,index) in piclist" :key="index">
+        <img :src="data">
       </div>
     </swiper>
   </div>
@@ -35,12 +35,12 @@ export default {
     console.log(this.$route.params.myid)
 
     Axios.post(
-      'http://www.91damai.com/api/goods/goodsDetail',
+      '/api/goods/goodsdetail',
       `num_iid=${this.$route.params.myid}`
     ).then(res => {
-      console.log(res.data.data)
+      console.log(res.data.data.local_small_images)
       this.datalist = res.data
-      this.piclist = res.data.data
+      this.piclist = res.data.data.local_small_images
     })
   },
   beforeMount () {
