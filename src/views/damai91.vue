@@ -1,7 +1,7 @@
 <template>
   <div>
     <headerbar ></headerbar>
-    <swiper :options="option" :key="datalist.length" class="option" classname="option">
+    <swiper :options="option" :key="datalist.length" class="option" classname="option" keepAlive>
       <div class="swiper-slide" v-for="(data,index) in datalist" :key="index">
         <!-- <div class="red"></div> -->
         <img :src="data.img_path" class="LB" />

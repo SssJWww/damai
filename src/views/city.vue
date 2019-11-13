@@ -1,10 +1,11 @@
 <template>
   <div>
+
     <div class="box">
       <span class="iconfont icon-back back" @click="backclick"></span>
       <input type="text" class="suoSou" placeholder="输入商品名称或输入宝贝标题" v-model="mytext" @input="changeinput"/>
-      <!-- <span class="daoHang iconfont icon-viewlist"></span> -->
       <span class="FD iconfont icon-search"></span>
+      <!-- <span class="daoHang iconfont icon-viewlist"></span> -->
       <button>搜索</button>
       <p class="word">新手小白一点通</p>
       <a href>
@@ -17,6 +18,7 @@
           </li>
       </ul>
     </div>
+
     <div class="hotSearchs">
       <p class="hotSearch">热门搜索</p>
       <img src="/img/hot.png" alt="">
@@ -38,12 +40,8 @@ export default {
       mytext: ''
     }
   },
-  // components:{
-  //       headerbar
-  // },
   mounted () {
     Axios.post('/api/goods/hotKeyword').then(res => {
-      console.log(res.data)
       this.datalist = res.data.data
     })
   },
@@ -52,10 +50,7 @@ export default {
       this.$router.go(-1)
     },
     changeinput () {
-    //   var value = this.mytext
       Axios.post('/api/goods/suggest', `q=${this.mytext}`).then(res => {
-        //   console.log(res.data)
-        // console.log(this.mytext)
         this.datalist2 = res.data.data
       })
     }
@@ -63,11 +58,6 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-// .find{
-//     background: linear-gradient(0deg,#fd366d,#fd8f6e);
-//     height: auto;
-//     width: 100%;
-// }
 button {
   color: white;
   font-size: 0.18rem;
