@@ -17,7 +17,7 @@
     <div class="list">
       <h3>达人清单</h3>
       <div class="setion">
-        <div class="sample" v-for="data in datalist" :key="data.id" @click="handleClick(data.id)">
+        <div class="sample" v-for="data in datalist" :key="data.num_iid" @click="handleClick(data.num_iid)">
           <img :src="data.pict_url" class="list_img" />
           <p class="list_title">{{data.title}}</p>
           <p class="price">
@@ -83,7 +83,7 @@ export default {
         this.time = res.data.data.created_at_str
         this.conent = res.data.data.content
         this.datalist = res.data.data.user_badge_list
-        // console.log(this.datalist)
+        console.log(this.datalist)
       }
     )
     Axios.post('/api/goods/doyenOther', `id=${this.$route.params.myid}`).then(
@@ -129,7 +129,8 @@ export default {
       this.$router.push('/circle')
     },
     handleClick (id) {
-      this.$router.push(`/goodDetail/${id}`)
+      console.log(id)
+      this.$router.push(`/hotshop/${id}`)
     },
     handleNew (id) {
       // console.log(id)
