@@ -37,8 +37,10 @@ export default {
   height: 3.12rem;
   background: white;
   position: relative;
-  top: 4.2rem;
+  top: 0rem;
   left: 0rem;
+    margin-top: 0.18rem;
+
   .headers {
     height: 0.49rem;
     img {

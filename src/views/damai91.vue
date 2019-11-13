@@ -1,14 +1,14 @@
 <template>
   <div>
     <headerbar ></headerbar>
-    <swiper :options="option" :key="datalist.length" class="option" classname="option">
+    <div class="red"></div>
+    <swiper :options="option" :key="datalist.length" class="option" classname="option" keepAlive>
       <div class="swiper-slide" v-for="(data,index) in datalist" :key="index">
-        <!-- <div class="red"></div> -->
+
         <img :src="data.img_path" class="LB" />
       </div>
     </swiper>
     <shopnav></shopnav>
-    <newbar></newbar>
     <!-- <swiper :options="newoption" class="newoption" :if="datalist2.length" classanme="newoption">
       <div class="swiper-slide" v-for="(data,index) in datalist2" :key="index">
         {{data.title}}
@@ -16,7 +16,8 @@
     </swiper> -->
 
     <imgbar></imgbar>
-    <discounts></discounts>
+    <newbar></newbar>
+    <!-- <discounts></discounts> -->
     <AppId></AppId>
     <hottop></hottop>
     <nicetop></nicetop>
@@ -92,31 +93,34 @@ export default {
 <style lang="scss" scoped>
 .option {
   margin-top: 0.53rem;
-}
-.LB {
   width: 3.59rem;
   height: 1.76rem;
   overflow: hidden;
   border-radius: 0.1rem;
   margin-left: 0.08rem;
+  background: transparent;
 }
-.newoption {
-  height: 0.19rem;
-  position: absolute;
-  top: 3.41rem;
-  left: 1.4rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-// .red{
-//   height: 0.16rem;
-//   background: #fe0036;
-//   border-radius: 0 0 100% 100%;
-//   position: absolute;
-//   top: 2rem;
-//   left: 0rem;
-//   width: 100%;
-//   // z-index:;
+// .LB {
+//     background: red;
+
 // }
+// .newoption {
+//   height: 0.19rem;
+//   position: absolute;
+//   top: 3.41rem;
+//   left: 1.4rem;
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+//   white-space: nowrap;
+// }
+.red{
+  height: 0.16rem;
+  background: #fe0036;
+  border-radius: 0 0 100% 100%;
+  position: absolute;
+  top: 2rem;
+  left: 0rem;
+  width: 100%;
+  z-index:999;
+}
 </style>

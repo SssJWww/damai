@@ -2,21 +2,38 @@
   <div>
     <ul>
       <li>
-        <img src="/img/indexMenu1.0f417fda.png" alt />
-        <p>全部分类</p>
+        <img src="/img/nav01.6003df15.png" alt />
+        <p>超级返</p>
       </li>
       <li>
-        <img src="/img/indexMenu2.2f012e1c.png" alt />
-        <p>限时秒杀</p>
+        <img src="/img/nav02.a7c14261.png" alt />
+        <p>超级券</p>
       </li>
       <li>
-        <img src="/img/indexMenu3.bdfbc5e8.png" alt />
+        <img src="/img/nav03.fc7854a9.png" alt />
+        <p>京东</p>
+      </li>
+      <li>
+        <img src="/img/nav04.82f6dbf0.png" alt />
+        <p>拼多多</p>
+      </li>
+            <li>
+        <img src="/img/nav05.b6a13cb4.png" alt />
+        <p>9.9包邮</p>
+      </li>
+      <li>
+        <img src="/img/nav06.591657df.png" alt />
         <p>实时榜单</p>
       </li>
       <li>
-        <img src="/img/indexMenu4.7e088195.png" alt />
-        <p>商家报名</p>
+        <img src="/img/nav07.fe7d3530.png" alt />
+        <p>品牌清仓</p>
       </li>
+      <li>
+        <img src="/img/nav08.6682c3cb.png" alt />
+        <p>全部分类</p>
+      </li>
+
     </ul>
   </div>
 </template>
@@ -31,6 +48,7 @@ export default {
 div{
 
 background-color: white ;
+height: 2rem;
 }
 ul {
   height: 0.94rem;
