@@ -126,13 +126,13 @@ export default {
       })
     },
     handleBack () {
-      this.$router.back()
+      this.$router.push('/circle')
     },
     handleClick (id) {
       this.$router.push(`/goodDetail/${id}`)
     },
     handleNew (id) {
-      console.log(id)
+      // console.log(id)
       this.$router.push(`/detail/${id}`)
     }
   }
