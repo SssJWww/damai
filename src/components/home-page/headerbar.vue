@@ -1,10 +1,20 @@
 <template>
     <div class="box">
-        <input type="text" class="suoSou" placeholder="输入商品名称或输入宝贝标题">
+        <input type="text" class="suoSou" placeholder="输入商品名称或输入宝贝标题" @click="handclick">
         <!-- <span class="daoHang iconfont icon-viewlist"></span> -->
         <span class="FD iconfont icon-search"></span>
     </div>
 </template>
+<script>
+export default {
+  methods: {
+    handclick () {
+      this.$router.push('/city')
+    }
+  }
+
+}
+</script>
 <style lang="scss" scoped>
 .box{
     height: .52rem;
