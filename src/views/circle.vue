@@ -35,7 +35,7 @@ export default {
     Axios.post('/api/goods/doyen', `page_no=1`).then(res => {
       //   console.log(res.data);
       this.datalist = res.data.data.list
-      console.log(this.datalist)
+      // console.log(this.datalist)
     })
   },
   methods: {
@@ -45,7 +45,7 @@ export default {
     handleMore () {
       this.num++
       Axios.post('/api/goods/doyen', `page_no=${this.num}`).then(res => {
-        console.log(res.data)
+        // console.log(res.data)
         this.datalist = [...this.datalist, ...res.data.data.list]
         // console.log(res.data.data.cur_page)
         // console.log(res.data.data.page_count)

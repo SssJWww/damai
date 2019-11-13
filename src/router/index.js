@@ -58,7 +58,6 @@ const routes = [
     path: '/city',
     component: City
   }
-
 ]
 
 const router = new VueRouter({
