@@ -42,6 +42,12 @@ export default {
     handleclick (id) {
       this.$router.push(`/hotshop/${id}`)
     }
+  },
+  beforeMount () {
+    this.$store.commit('hideTabbar')
+  },
+  beforeDestroy () {
+    this.$store.commit('showTabbar')
   }
 }
 </script>

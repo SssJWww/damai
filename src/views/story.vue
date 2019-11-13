@@ -43,12 +43,6 @@ export default {
       this.$router.push('/hotshop')
     }
   }
-  // beforeMount(){
-  //   this.$store.commit("hide")
-  // },
-  // beforeDestroy(){
-  //   this.$store.commit("show")
-  // }
 }
 </script>
 
