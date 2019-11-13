@@ -1,27 +1,37 @@
 <template>
   <div>
-    <div class="box">
-      <span class="iconfont icon-back back" @click="backclick"></span>
-      <input type="text" class="suoSou" placeholder="输入商品名称或输入宝贝标题" v-model="mytext" @input="changeinput"/>
-      <!-- <span class="daoHang iconfont icon-viewlist"></span> -->
-      <span class="FD iconfont icon-search"></span>
-      <button>搜索</button>
-      <p class="word">新手小白一点通</p>
-      <a href>
-        <img src="/img/guideTo.ed883d14.png" alt />
-      </a>
+      <div class="box">
+        <span class="iconfont icon-back back" @click="backclick"></span>
+        <input
+          type="text"
+          class="suoSou"
+          placeholder="输入商品名称或输入宝贝标题"
+          v-model="mytext"
+          @input="changeinput"
+        />
+        <!-- <span class="daoHang iconfont icon-viewlist"></span> -->
+        <span class="FD iconfont icon-search"></span>
+        <button>搜索</button>
+        <p class="word">新手小白一点通</p>
+        <a href>
+          <img src="/img/guideTo.ed883d14.png" alt />
+        </a>
 
-      <ul>
-          <li v-for="(data,index) in datalist2" :key="index">
-              {{data}}
-          </li>
-      </ul>
-    </div>
+        <ul>
+          <li v-for="(data,index) in datalist2" :key="index">{{data}}</li>
+        </ul>
+      </div>
     <div class="hotSearchs">
       <p class="hotSearch">热门搜索</p>
-      <img src="/img/hot.png" alt="">
+      <img src="/img/hot.png" alt />
       <ul>
-        <router-link v-for="(data,index) in datalist" :key="index" :class="index===0?'active':'active2'" tag="li" to="/main">{{data}}</router-link>
+        <router-link
+          v-for="(data,index) in datalist"
+          :key="index"
+          :class="index===0?'active':'active2'"
+          tag="li"
+          to="/main"
+        >{{data}}</router-link>
       </ul>
     </div>
   </div>
@@ -52,7 +62,7 @@ export default {
       this.$router.go(-1)
     },
     changeinput () {
-    //   var value = this.mytext
+      //   var value = this.mytext
       Axios.post('/api/goods/suggest', `q=${this.mytext}`).then(res => {
         //   console.log(res.data)
         // console.log(this.mytext)
@@ -109,24 +119,24 @@ button {
       margin: auto;
     }
   }
-  ul{
+  ul {
+    width: 100%;
+    height: auto;
+    z-index: 100;
+    position: absolute;
+    top: 0.51rem;
+    left: 0rem;
+    li {
+      height: 0.49rem;
       width: 100%;
-      height: auto;
+      background: white;
       z-index: 100;
-      position: absolute;
-      top: 0.51rem;
-      left: 0rem;
-      li{
-          height: 0.49rem;
-          width: 100%;
-          background: white;
-           z-index: 100;
-           font-size: 0.16rem;
-           color:#686868;
-           line-height: 0.49rem;
-           border-bottom: 1px solid #eee;
-           padding-left: 0.1rem
-      }
+      font-size: 0.16rem;
+      color: #686868;
+      line-height: 0.49rem;
+      border-bottom: 1px solid #eee;
+      padding-left: 0.1rem;
+    }
   }
 }
 .suoSou {
@@ -180,17 +190,17 @@ button {
       margin-right: 0.2rem;
       margin-top: 0.1rem;
     }
-    .active{
-        background:#ffe4ea;
+    .active {
+      background: #ffe4ea;
     }
-    .active2{
-        background:#eeeeee;
+    .active2 {
+      background: #eeeeee;
     }
   }
-  img{
-      position: absolute;
-      top: 0.5rem;
-      left: 0.6rem;
+  img {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.6rem;
   }
 }
 </style>

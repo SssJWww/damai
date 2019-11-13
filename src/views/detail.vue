@@ -43,7 +43,7 @@
     <div class="picture" v-for="(pic,index) in piclist" :key="index">
       <img :src="pic" alt />
     </div>
-    <div class="di">
+    <div class="di" v-if="isMout">
       <i class="iconfont icon-color-filling"></i>
       <div class="coll">收藏</div>
       <div class="share">分享赚</div>
