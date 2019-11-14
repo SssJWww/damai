@@ -19,7 +19,7 @@ export default {
 <style lang="scss" scoped>
 .box{
     height: .52rem;
-    background: #ff4040;
+    background: #fe0036;
     line-height: .49rem;
     position: fixed;
     z-index: 999;
