@@ -9,7 +9,7 @@
         <img src="/img/nav02.a7c14261.png" alt />
         <p>超级券</p>
       </li>
-      <li>
+      <li @click="handleClick()">
         <img src="/img/nav03.fc7854a9.png" alt />
         <p>京东</p>
       </li>
@@ -41,6 +41,11 @@
 export default {
   data () {
     return {}
+  },
+  methods: {
+    handleClick () {
+      this.$router.push('/jingdong')
+    }
   }
 }
 </script>

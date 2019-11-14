@@ -13,7 +13,6 @@ import City from '@/views/city'
 import Super from '@/views/super'
 import All from '@/views/all'
 import Rule from '@/views/rule'
-import mytext from '@/views/mytext'
 import jingdong from '@/views/jingdong'
 Vue.use(VueRouter)
 
@@ -74,10 +73,6 @@ const routes = [
   {
     path: '/rule',
     component: Rule
-  },
-  {
-    path: '/:mytext',
-    component: mytext
   },
   {
     path: '/jingdong',
