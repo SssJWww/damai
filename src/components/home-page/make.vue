@@ -1,24 +1,28 @@
 <template>
-    <div>
-    <div class="box" >
-      <router-link class="iconfont icon-back back"  to="/main" tag="span"></router-link>
-      <input type="text" class="suoSou2" placeholder="输入商品名称或输入宝贝标题" v-model="mytext" @input="changeinput" />
+  <div>
+    <div class="box">
+      <router-link class="iconfont icon-back back" to="/main" tag="span"></router-link>
+      <input
+        type="text"
+        class="suoSou2"
+        placeholder="输入商品名称或输入宝贝标题"
+        v-model="mytext"
+        @input="changeinput"
+      />
       <span class="FD iconfont icon-search"></span>
       <!-- <span class="daoHang iconfont icon-viewlist"></span> -->
-      <button @click="buttonclick" class="put" >搜索</button>
+      <button @click="buttonclick" class="put">搜索</button>
 
       <p class="word">新手小白一点通</p>
       <a @click="handclick">
-        <img src="/img/guideTo.ed883d14.png"  />
+        <img src="/img/guideTo.ed883d14.png" />
       </a>
 
       <ul>
-          <li v-for="(data,index) in datalist2" :key="index" >
-              {{data}}
-          </li>
+        <li v-for="(data,index) in datalist2" :key="index" @click="select(data)">{{data}}</li>
       </ul>
-   </div>
     </div>
+  </div>
 </template>
 <script>
 import Axios from 'axios'
@@ -27,12 +31,16 @@ import { Toast } from 'mint-ui'
 export default {
   data () {
     return {
-    //   datalist: [],
+      //   datalist: [],
       datalist2: [],
       mytext: ''
     }
   },
   methods: {
+    select (data) {
+      // console.log(data);
+      this.$router.push({ path: '/mytext', query: { data: data } })
+    },
     // backclick () {
     //   this.$router.go(-1)
     // },
@@ -43,7 +51,10 @@ export default {
       if (this.mytext === '') {
         Toast('请输入关键搜索字')
       } else {
-        this.$router.push({ path: '/mytext', query: { data: `${this.mytext}` } })
+        this.$router.push({
+          path: '/mytext',
+          query: { data: `${this.mytext}` }
+        })
       }
     },
     changeinput () {
@@ -56,7 +67,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-    .box {
+.box {
   height: auto;
   background: linear-gradient(0deg, #fd366d, #fd8f6e);
   line-height: 0.49rem;
@@ -86,24 +97,24 @@ export default {
       margin: auto;
     }
   }
-  ul{
+  ul {
+    width: 100%;
+    height: auto;
+    z-index: 100;
+    position: absolute;
+    top: 0.51rem;
+    left: 0rem;
+    li {
+      height: 0.49rem;
       width: 100%;
-      height: auto;
+      background: white;
       z-index: 100;
-      position: absolute;
-      top: 0.51rem;
-      left: 0rem;
-      li{
-          height: 0.49rem;
-          width: 100%;
-          background: white;
-           z-index: 100;
-           font-size: 0.16rem;
-           color:#686868;
-           line-height: 0.49rem;
-           border-bottom: 1px solid #eee;
-           padding-left: 0.1rem
-      }
+      font-size: 0.16rem;
+      color: #686868;
+      line-height: 0.49rem;
+      border-bottom: 1px solid #eee;
+      padding-left: 0.1rem;
+    }
   }
 }
 .suoSou2 {
@@ -142,5 +153,4 @@ button {
   border: 0;
   outline: none;
 }
-
 </style>
