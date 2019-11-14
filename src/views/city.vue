@@ -18,6 +18,7 @@
         >{{data}}</router-link>
       </ul>
     </div>
+
   </div>
 </template>
 <script>
@@ -39,6 +40,19 @@ export default {
     Axios.post('/api/goods/hotKeyword').then(res => {
       this.datalist = res.data.data
     })
+  },
+  methods: {
+    // moreclick () {
+    //   // console.log('点击了')
+    //   this.current++
+    //   if (this.datalist === this.datalist.length) {
+    //     return
+    //   }
+    //   Axios.post('/api/goods/goodsList', `page_num=${this.current}&page_size=100`).then(res => {
+    //     // console.log(res.data.data.list)
+    //     this.datalist = [...this.datalist, ...res.data.data.list]
+    //   })
+    // }
   }
 
 }
@@ -84,4 +98,5 @@ export default {
     left: 0.6rem;
   }
 }
+
 </style>

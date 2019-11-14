@@ -1,8 +1,7 @@
 <template>
     <div>
         <searchHeader>
-          {{myIndex}}
-          {{text}}
+
         </searchHeader>
         <ul>
             <li v-for="(data,index) in datalist" :key="index">
@@ -16,6 +15,10 @@
 
             </li>
         </ul>
+            <div  class="more">
+    <p @click="moreclick"> 加载更多</p>
+    </div>
+
     </div>
 </template>
 <script>
@@ -31,26 +34,11 @@ export default {
       datalist: [],
       total: 0,
       current: 1,
-      text: '',
-      myIndex: ''
+      text: ''
+
     }
   },
-  //   created(){
-  //       this.getParams()
-  //     },
-  // methods :{getParams(){
-  //         // 取到路由带过来的参数
-  //         const routerParams = this.$route.query.data
-  //         // 将数据放在当前组件的数据内
-
-  //       }
-  //     },
-  //     watch: {
-  //       '$route': 'getParams'
-  //     },
   mounted () {
-    // document.querySelector('.suoSou2')
-    // console.log()
     this.text = this.$route.query.data
     Axios.post('/api/goods/search', `sort=0&q=${this.text}&page_num=1&page_size=100`).then(res => {
       // console.log(res.data.data.list)
@@ -65,11 +53,12 @@ export default {
       if (this.datalist === this.datalist.length) {
         return
       }
-      Axios.post('/api/goods/goodsList', `page_num=${this.current}&page_size=100`).then(res => {
+      Axios.post('/api/goods/search', `sort=0&q=${this.text}&page_num=${this.current}&page_size=100`).then(res => {
         // console.log(res.data.data.list)
         this.datalist = [...this.datalist, ...res.data.data.list]
       })
     }
+
   }
 }
 </script>
@@ -143,6 +132,19 @@ export default {
       .taoBao{
           text-decoration: line-through
       }
+    }
+  }
+  .more{
+    height: 0.8rem;
+    text-align: center;
+    p{
+      height: .5rem;
+      width: 1.89rem;
+      border-radius:1.5rem ;
+      border: 0.01rem solid #ccc ;
+          line-height: .5rem;
+          margin: .4rem auto;
+
     }
   }
 </style>
