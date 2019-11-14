@@ -13,8 +13,8 @@ import City from '@/views/city'
 import Super from '@/views/super'
 import All from '@/views/all'
 import Rule from '@/views/rule'
-import mytext from '@/views/mytext'
 import jingdong from '@/views/jingdong'
+import Mytext from '@/views/mytext'
 Vue.use(VueRouter)
 
 const routes = [
@@ -76,12 +76,12 @@ const routes = [
     component: Rule
   },
   {
-    path: '/:mytext',
-    component: mytext
-  },
-  {
     path: '/jingdong',
     component: jingdong
+  },
+  {
+    path: '/mytext',
+    component: Mytext
   }
 ]
 
