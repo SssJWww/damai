@@ -1,7 +1,7 @@
 <template>
   <div>
     <router-link class="iconfont icon-back back" to="/main" tag="span"></router-link>
-    <div></div>
+    <div class="hangtitle">{{text}}</div>
     <router-link class="FD iconfont icon-search" to="/city" tag="span"></router-link>
   </div>
 </template>
@@ -25,5 +25,22 @@ div {
     line-height: 0.51rem;
     font-size: 0.16rem;
   }
+  .hangtitle{
+    text-align: center;
+    line-height: 0.51rem;
+    font-size: 0.20rem
+  }
 }
 </style>
+<script>
+export default {
+  data () {
+    return {
+      text: ''
+    }
+  },
+  mounted () {
+    this.text = this.$route.query.data
+  }
+}
+</script>

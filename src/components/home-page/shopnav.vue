@@ -1,38 +1,40 @@
 <template>
   <div>
     <ul>
-      <li>
+      <router-link tag="li" to="/juan">
         <img src="/img/nav01.6003df15.png" alt />
         <p>超级返</p>
-      </li>
-      <li>
+      </router-link>
+      <router-link tag="li" to="/super">
         <img src="/img/nav02.a7c14261.png" alt />
         <p>超级券</p>
-      </li>
-      <li @click="handleClick()">
+
+      </router-link>
+      <router-link tag="li" to="/main">
+
         <img src="/img/nav03.fc7854a9.png" alt />
         <p>京东</p>
-      </li>
-      <li>
+      </router-link>
+      <router-link tag="li" to="/main">
         <img src="/img/nav04.82f6dbf0.png" alt />
         <p>拼多多</p>
-      </li>
-            <li>
+      </router-link>
+            <router-link tag="li" to="/you">
         <img src="/img/nav05.b6a13cb4.png" alt />
         <p>9.9包邮</p>
-      </li>
-      <li>
+      </router-link>
+      <router-link tag="li" to="/main">
         <img src="/img/nav06.591657df.png" alt />
         <p>实时榜单</p>
-      </li>
-      <li>
+      </router-link>
+      <router-link tag="li" to="/cang">
         <img src="/img/nav07.fe7d3530.png" alt />
         <p>品牌清仓</p>
-      </li>
-      <li>
+      </router-link>
+      <router-link tag="li" to="/all">
         <img src="/img/nav08.6682c3cb.png" alt />
         <p>全部分类</p>
-      </li>
+      </router-link>
 
     </ul>
   </div>
