@@ -14,6 +14,7 @@ import Super from '@/views/super'
 import All from '@/views/all'
 import Rule from '@/views/rule'
 import mytext from '@/views/mytext'
+import jingdong from '@/views/jingdong'
 Vue.use(VueRouter)
 
 const routes = [
@@ -77,6 +78,10 @@ const routes = [
   {
     path: '/:mytext',
     component: mytext
+  },
+  {
+    path: '/jingdong',
+    component: jingdong
   }
 ]
 
