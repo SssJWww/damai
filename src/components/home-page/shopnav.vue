@@ -15,7 +15,7 @@
         <img src="/img/nav03.fc7854a9.png" alt />
         <p>京东</p>
       </router-link>
-      <router-link tag="li" to="/main">
+      <router-link tag="li" to="/pinduo">
         <img src="/img/nav04.82f6dbf0.png" alt />
         <p>拼多多</p>
       </router-link>

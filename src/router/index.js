@@ -19,6 +19,7 @@ import juan from '@/views/juan'
 import you from '@/views/you'
 import cang from '@/views/cang'
 import jingdongdong from '@/views/jingdongdong'
+import pinduo from '@/views/pinduo'
 Vue.use(VueRouter)
 
 const routes = [
@@ -102,6 +103,10 @@ const routes = [
   {
     path: '/jingdongdong',
     component: jingdongdong
+  },
+  {
+    path: '/pinduo',
+    component: pinduo
   }
 ]
 
