@@ -32,7 +32,7 @@ import headerbar from '@/components/home-page/headerbar'
 import shopnav from '@/components/home-page/shopnav'
 import imgbar from '@/components/home-page/imgbar'
 import newbar from '@/components/home-page/newbar'
-import discounts from '@/components/home-page/discounts'
+// import discounts from '@/components/home-page/discounts'
 import AppId from '@/components/home-page/AppId'
 import hottop from '@/components/home-page/hottop'
 import nicetop from '@/components/home-page/nicetop'
@@ -71,7 +71,7 @@ export default {
     shopnav,
     imgbar,
     newbar,
-    discounts,
+    // discounts,
     AppId,
     hottop,
     nicetop,
