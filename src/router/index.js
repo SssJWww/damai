@@ -15,6 +15,9 @@ import All from '@/views/all'
 import Rule from '@/views/rule'
 import jingdong from '@/views/jingdong'
 import Mytext from '@/views/mytext'
+import juan from '@/views/juan'
+import you from '@/views/you'
+import cang from '@/views/cang'
 Vue.use(VueRouter)
 
 const routes = [
@@ -82,6 +85,18 @@ const routes = [
   {
     path: '/mytext',
     component: Mytext
+  },
+  {
+    path: '/juan',
+    component: juan
+  },
+  {
+    path: '/you',
+    component: you
+  },
+  {
+    path: '/cang',
+    component: cang
   }
 ]
 

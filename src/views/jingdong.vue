@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="red">
-      <div class="back">
+      <div class="back" @click="handleback()">
         <i class="iconfont icon-back"></i>
       </div>
       <div class="east">京东优选</div>
@@ -56,6 +56,9 @@ export default {
     })
   },
   methods: {
+    handleback () {
+      this.$router.back()
+    },
     handleText () {
     }
   }
