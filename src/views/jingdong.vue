@@ -6,7 +6,7 @@
       </div>
       <div class="east">京东优选</div>
       <div class="search">
-        <input type="text" placeholder="请输入关键词/商品/ID/商品链接"/>
+        <input type="text" placeholder="请输入关键词/商品/ID/商品链接" v-model="metext"/>
         <i class="iconfont icon-search"></i>
         <button @click="handleText()">搜索</button>
       </div>
@@ -43,7 +43,8 @@ import Axios from 'axios'
 export default {
   data () {
     return {
-      datalist: []
+      datalist: [],
+      metext: ''
     }
   },
   mounted () {
@@ -60,6 +61,8 @@ export default {
       this.$router.back()
     },
     handleText () {
+      console.log(this.metext)
+      this.$router.push({ path: '/jingdongdong', query: { data: `${this.metext}` } })
     }
   }
 }

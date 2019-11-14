@@ -18,6 +18,7 @@ import Mytext from '@/views/mytext'
 import juan from '@/views/juan'
 import you from '@/views/you'
 import cang from '@/views/cang'
+import jingdongdong from '@/views/jingdongdong'
 Vue.use(VueRouter)
 
 const routes = [
@@ -97,6 +98,10 @@ const routes = [
   {
     path: '/cang',
     component: cang
+  },
+  {
+    path: '/jingdongdong',
+    component: jingdongdong
   }
 ]
 
