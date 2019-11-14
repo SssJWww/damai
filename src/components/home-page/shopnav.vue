@@ -23,7 +23,7 @@
         <img src="/img/nav05.b6a13cb4.png" alt />
         <p>9.9包邮</p>
       </router-link>
-      <router-link tag="li" to="/main">
+      <router-link tag="li" to="/hotshop">
         <img src="/img/nav06.591657df.png" alt />
         <p>实时榜单</p>
       </router-link>
