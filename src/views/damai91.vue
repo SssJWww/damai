@@ -1,19 +1,22 @@
 <template>
   <div>
-    <headerbar ></headerbar>
-    <div class="red"></div>
-    <swiper :options="option" :key="datalist.length" class="option" classname="option" keepAlive>
-      <div class="swiper-slide" v-for="(data,index) in datalist" :key="index">
-
-        <img :src="data.img_path" class="LB" />
-      </div>
-    </swiper>
+    <headerbar></headerbar>
+    <div class="bac">
+    <div class="red">
+      <swiper :options="option" :key="datalist.length" class="option option" keepAlive>
+        <div class="swiper-slide" v-for="(data,index) in datalist" :key="index">
+          <img :src="data.img_path" class="LB" />
+        </div>
+      </swiper>
+      <!-- <div class="red"></div> -->
+    </div>
+    </div>
     <shopnav></shopnav>
     <!-- <swiper :options="newoption" class="newoption" :if="datalist2.length" classanme="newoption">
       <div class="swiper-slide" v-for="(data,index) in datalist2" :key="index">
         {{data.title}}
       </div>
-    </swiper> -->
+    </swiper>-->
 
     <imgbar></imgbar>
     <newbar></newbar>
@@ -113,14 +116,18 @@ export default {
 //   text-overflow: ellipsis;
 //   white-space: nowrap;
 // }
-.red{
-  height: 0.16rem;
+.red {
+  height: 1.4rem;
   background: #fe0036;
-  border-radius: 0 0 100% 100%;
-  position: absolute;
-  top: 2rem;
-  left: 0rem;
+  border-radius: 0 0 10% 10%;
+  // position: absolute;
+  // top: 2rem;
+  // left: 0rem;
   width: 100%;
-  z-index:999;
+}
+.bac{
+    background: white;
+    height: 1.8rem;
+
 }
 </style>
