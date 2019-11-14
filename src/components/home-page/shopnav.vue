@@ -10,7 +10,7 @@
         <p>超级券</p>
 
       </router-link>
-      <router-link tag="li" to="/main">
+      <router-link tag="li" to="/jingdong">
 
         <img src="/img/nav03.fc7854a9.png" alt />
         <p>京东</p>
