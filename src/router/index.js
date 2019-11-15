@@ -22,7 +22,7 @@ import jingdongdong from '@/views/jingdongdong'
 import pinduo from '@/views/pinduo'
 import submit from '@/views/submit'
 import activity from '@/views/activity'
-import subscrible from '@views/subscrible'
+import subscrible from '@/views/subscrible'
 Vue.use(VueRouter)
 
 const routes = [
