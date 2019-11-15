@@ -1,6 +1,7 @@
 <template>
   <div class="all">
     <img src="/img/fast.png" alt />
+    <div class="shu">|</div>
   </div>
 </template>
 <script>
@@ -25,7 +26,7 @@ export default {
   left: 0rem;
   img {
     height: 0.24rem;
-    width: 0.7rem;
+    width: 0.48rem;
     position: absolute;
     top: 0.15rem;
     left: 0.2rem;
@@ -33,5 +34,10 @@ export default {
 }
 .newoption{
   height: 0.19rem;
+}
+.shu{
+  position: absolute;
+  top: 0.17rem;
+  left: 0.8rem
 }
 </style>

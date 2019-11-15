@@ -2,7 +2,8 @@
     <div>
         <ul>
             <li v-for="data in datalist" :key="data.id">
-                <img :src="data.img_path" alt="">
+
+                <a href="https://www.tmall.com/"><img :src="data.img_path" alt="" ></a>
             </li>
         </ul>
     </div>
@@ -38,6 +39,8 @@ ul{
     img{
         height: 1.25rem;
         width: 1.87rem;
+        //
 
     }
+    // a{display: block;}
 </style>
