@@ -2,12 +2,12 @@
   <div>
     <ul class="dd1">
       <li v-for="data in datalist" :key="data.id" class="dd2">
-          <span  @click="picclick(data)">{{data.name}}</span>
-        <ul class="daohang1" v-show="hidden">
-          <li class="daohang2" v-for="(item,index) in data.children" :key="index" @click.stop>
+          <span  @click="picclick(data.id)">{{data.name}}</span>
+        <ul class="daohang1" v-show="hidden" >
+          <li class="daohang2" v-for="item in data.children" :key="item.parnet_id" @click.stop >
             <span>
-              <img :src="item.img_path" alt />
-              {{item.name}}
+              <!-- <img :src="item.img_path" alt /> -->
+              {{item.parent_id}}
             </span>
           </li>
         </ul>
@@ -37,6 +37,8 @@ export default {
   },
   methods: {
     picclick (data) {
+      console.log(data, 666)
+
       this.hidden = !this.hidden
     }
   }

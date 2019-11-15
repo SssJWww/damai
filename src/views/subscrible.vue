@@ -1,5 +1,5 @@
 <template>
-    <div>
-        subscrible
+   <div>
+        dingyue
     </div>
 </template>

@@ -2,21 +2,22 @@
   <div>
     <headerbar></headerbar>
     <div class="bac">
-    <div class="red">
-      <swiper :options="option" :key="datalist.length" class="option option" keepAlive>
-        <div class="swiper-slide" v-for="(data,index) in datalist" :key="index">
-          <img :src="data.img_path" class="LB" />
-        </div>
-      </swiper>
-      <!-- <div class="red"></div> -->
-    </div>
+      <div class="red">
+        <swiper :options="option" :key="datalist.length" class="option " classname="option" keepAlive>
+          <div class="swiper-slide" v-for="(data,index) in datalist" :key="index">
+            <img :src="data.img_path" class="LB" />
+          </div>
+        </swiper>
+        <!-- <div class="red"></div> -->
+      </div>
     </div>
     <shopnav></shopnav>
-    <!-- <swiper :options="newoption" class="newoption" :if="datalist2.length" classanme="newoption">
+
+    <swiper :options="newoption" class="newoption " :key="datalist2.length" classname="newoption">
       <div class="swiper-slide" v-for="(data,index) in datalist2" :key="index">
-        {{data.title}}
+        <div>{{data.title}}</div>
       </div>
-    </swiper>-->
+    </swiper>
 
     <imgbar></imgbar>
     <newbar></newbar>
@@ -52,14 +53,15 @@ export default {
         },
         pagination: {
           el: '.swiper-pagination'
+          // clickable: true
         }
       },
 
       newoption: {
-        direction: 'vertical',
         loop: true,
+        direction: 'vertical',
         autoplay: {
-          delay: 1000,
+          delay: 2500,
           disableOnInteraction: false
         }
       },
@@ -107,15 +109,16 @@ export default {
 //     background: red;
 
 // }
-// .newoption {
-//   height: 0.19rem;
-//   position: absolute;
-//   top: 3.41rem;
-//   left: 1.4rem;
-//   overflow: hidden;
-//   text-overflow: ellipsis;
-//   white-space: nowrap;
-// }
+.newoption {
+  height: 0.19rem;
+  position: absolute;
+  top: 5.75rem;
+  left: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 2.69rem;
+}
 .red {
   height: 1.4rem;
   background: #fe0036;
@@ -125,9 +128,8 @@ export default {
   // left: 0rem;
   width: 100%;
 }
-.bac{
-    background: white;
-    height: 1.8rem;
-
+.bac {
+  background: white;
+  height: 1.8rem;
 }
 </style>

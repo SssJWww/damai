@@ -30,7 +30,7 @@ export default {
   height:50px;
   line-height: 50px;
   font-size: 18px;
-  // background:#333;
+  background:#333;
   opacity: .6;
   position: absolute;
   color:white;

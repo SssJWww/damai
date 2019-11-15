@@ -120,7 +120,7 @@ const routes = [
     component: activity
   },
   {
-    path: '/subsscrible',
+    path: '/subscrible',
     component: subscrible
   }
 ]

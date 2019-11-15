@@ -2,10 +2,10 @@
   <div class="all">
     <div class="headers">
       <img src="/img/brandTitleTxt.fb9ffa1b.png" alt />
-      <span>更多 ></span>
+      <router-link tag="span" to="/cang">更多 > </router-link>
     </div>
     <ul>
-      <li v-for="data in datalist" :key="data.id">
+      <li v-for="data in datalist" :key="data.id" @click="handclick(data.num_iid)">
         <img :src="data.pict_url" alt />
         <p class="guide">{{data.title}}</p>
         <p class="price">￥{{data.coupon_after_price}}</p>
@@ -29,6 +29,11 @@ export default {
       // console.log(res.data.data.hot)
       this.datalist = res.data.data.hot
     })
+  },
+  methods: {
+    handclick (id) {
+      this.$router.push(`/hotshop/${id}`)
+    }
   }
 }
 </script>
