@@ -20,6 +20,9 @@ import you from '@/views/you'
 import cang from '@/views/cang'
 import jingdongdong from '@/views/jingdongdong'
 import pinduo from '@/views/pinduo'
+import submit from '@/views/submit'
+import activity from '@/views/activity'
+import subscrible from '@views/subscrible'
 Vue.use(VueRouter)
 
 const routes = [
@@ -107,6 +110,18 @@ const routes = [
   {
     path: '/pinduo',
     component: pinduo
+  },
+  {
+    path: '/submit',
+    component: submit
+  },
+  {
+    path: '/activity',
+    component: activity
+  },
+  {
+    path: '/subsscrible',
+    component: subscrible
   }
 ]
 

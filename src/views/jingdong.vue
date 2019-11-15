@@ -62,7 +62,7 @@ export default {
     },
     handleText () {
       console.log(this.metext)
-      this.$router.push({ path: '/jingdongdong', query: { data: `${this.metext}` } })
+      this.$router.push({ path: '/jingdongdong', query: { data: `${this.metext}`, number: '123' } })
     }
   }
 }
