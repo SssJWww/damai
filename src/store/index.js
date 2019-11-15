@@ -29,7 +29,6 @@ const store = new Vuex.Store({
         store.commit('getShopList', res.data.data.list)
       })
     }
-
   },
   modules: {
   }

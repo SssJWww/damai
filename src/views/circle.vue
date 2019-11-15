@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="more">
-      <button @click="handleMore()" ref="bottom">点击加载更多</button>
+      <button @click="handleMore()" ref="bottom" v-show="datalist.length">点击加载更多</button>
     </div>
   </div>
 </template>

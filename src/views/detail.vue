@@ -32,7 +32,7 @@
         class="vaild"
         v-if="isMout"
       >有效期限:{{datalist.data.coupon_start_time_str.slice(5)}}至{{datalist.data.coupon_end_time_str.slice(5)}}</div>
-      <div class="have" v-if="isMout">立即领卷</div>
+      <div class="have" v-if="isMout" @click="handleJump(datalist.data.num_iid)">立即领卷</div>
     </div>
     <div class="story" v-if="isMout">
       <div class="shop">{{datalist.data.shop_title}}</div>
@@ -103,6 +103,9 @@ export default {
     },
     handleHome () {
       this.$router.push('/main')
+    },
+    handleJump (id) {
+      location.href = `https://item.taobao.com/item.htm?id=${id}`
     }
   }
 }
