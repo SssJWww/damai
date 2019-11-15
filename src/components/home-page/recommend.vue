@@ -3,10 +3,10 @@
     <div class="headers">
       <p class="nine">为您推荐</p>
       <p class="JX">· 超级实惠 实时更新</p>
-      <span>更多 ></span>
+      <router-link tag="span" to="/super">更多 > </router-link>
     </div>
     <ul>
-      <li v-for="data in datalist" :key="data.id">
+      <li v-for="data in datalist" :key="data.id"  :myid="data.num_iid" @click="handclick(data.num_iid)">
         <img :src="data.pict_url" alt />
         <p class="guide">{{data.title}}</p>
         <p class="price">￥{{data.coupon_after_price}}</p>
@@ -40,6 +40,9 @@ export default {
     })
   },
   methods: {
+    handclick (id) {
+      this.$router.push(`/hotshop/${id}`)
+    },
     moreclick () {
       // console.log('点击了')
       this.current++
@@ -52,6 +55,7 @@ export default {
       })
     }
   }
+
 }
 </script>
 
@@ -77,8 +81,8 @@ export default {
       position: absolute;
       top: 0.15rem;
       right: 0.2rem;
-      color: black;
-      font-size: 0.16rem;
+      color: #c5c5c5;
+      font-size: 0.14rem;
       background: white;
     }
     p {
