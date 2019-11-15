@@ -253,7 +253,7 @@ export default {
     z-index: 10px;
     border-radius: 10px;
     .shop {
-      width: 120px;
+      width:100%;
       height: 15px;
       line-height: 20px;
       position: relative;
