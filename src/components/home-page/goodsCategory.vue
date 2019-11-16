@@ -7,7 +7,6 @@
         </li>
       </ul>
     </div>
-    <!-- <div class="shopall"> -->
       <ul class="daohang1" v-show="newdatalist.length">
         <li class="daohang2" v-for="(item,index) in newdatalist" :key="index" @click.stop>
           <span style="height:40px" @click="PPclick(item.name)">
@@ -16,12 +15,11 @@
           </span>
         </li>
       </ul>
-    <!-- </div> -->
   </div>
 </template>
 <script>
 import Axios from 'axios'
-import BScroll from '@better-scroll/core'
+import BScroll from 'better-scroll'
 export default {
   data () {
     return {
