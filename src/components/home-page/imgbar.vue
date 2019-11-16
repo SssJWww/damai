@@ -1,8 +1,17 @@
 <template>
     <div>
-        <img src="/img/businessAd.1de8fa80.png" alt="">
+        <img src="/img/businessAd.1de8fa80.png" alt="" @click="handclick">
     </div>
 </template>
+<script>
+export default {
+  methods: {
+    handclick () {
+      this.$router.push('/submit')
+    }
+  }
+}
+</script>
 <style lang="scss" scoped>
 div{
     position: relative;
