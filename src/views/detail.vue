@@ -115,90 +115,90 @@ export default {
 #detail {
   overflow: hidden;
   position: relative;
-  height: 1800px;
+  height: 18.00rem;
   .back {
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: .40rem;
+    height: .40rem;
     background: #778788;
     color: white;
     text-align: center;
-    line-height: 40px;
+    line-height: .40rem;
     border-radius: 50%;
-    font-size: 22px;
-    top: 20px;
-    left: 20px;
+    font-size: .22rem;
+    top: .20rem;
+    left: .20rem;
     z-index: 10;
   }
   .home {
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: .40rem;
+    height: .40rem;
     background: #778788;
     color: white;
     text-align: center;
-    line-height: 40px;
+    line-height: .40rem;
     border-radius: 50%;
-    font-size: 22px;
-    top: 20px;
-    left: 315px;
+    font-size: .22rem;
+    top: .20rem;
+    left: 3.15rem;
     z-index: 10;
   }
   .price {
     position: relative;
     width: 100%;
-    height: 240px;
+    height: 2.40rem;
     background: white;
     .jia {
       position: absolute;
-      top: 14px;
-      left: 10px;
+      top: .14rem;
+      left: .10rem;
       font-weight: bold;
-      height: 30px;
-      font-size: 24px;
+      height: .30rem;
+      font-size: .24rem;
       color: red;
       span {
-        font-size: 12px;
+        font-size: .12rem;
       }
     }
     .fan {
-      line-height: 26px;
+      line-height: .26rem;
       position: absolute;
-      top: 15px;
-      left: 110px;
-      width: 72px;
-      height: 26px;
+      top: .15rem;
+      left: 1.10rem;
+      width: .72rem;
+      height: .26rem;
       background: #ffeed6;
       color: #fe0036;
     }
     .zhe {
-      width: 60px;
-      height: 32px;
-      font-size: 14px;
-      line-height: 32px;
+      width: .60rem;
+      height: .32rem;
+      font-size: .14rem;
+      line-height: .32rem;
       color: #999;
       position: absolute;
-      top: 45px;
-      left: 10px;
+      top: .45rem;
+      left: .10rem;
       text-decoration: line-through;
     }
     .sale {
-      width: 75px;
-      height: 35px;
+      width: .75rem;
+      height: .35rem;
       color: #999;
       position: absolute;
-      top: 45px;
-      left: 290px;
-      line-height: 35px;
-      font-size: 14px;
+      top: .45rem;
+      left: 2.90rem;
+      line-height: .35rem;
+      font-size: .14rem;
     }
     .cheap {
-      width: 230px;
-      height: 28px;
+      width: 2.30rem;
+      height: .28rem;
       position: absolute;
-      top: 167px;
-      left: 95px;
-      font-size: 18px;
+      top: 1.67rem;
+      left: .95rem;
+      font-size: .18rem;
       z-index: 11;
       span {
         font-weight: bold;
@@ -206,163 +206,163 @@ export default {
     }
 
     .title {
-      width: 359px;
-      height: 64px;
+      width: 3.59rem;
+      height: .64rem;
       text-overflow: ellipsis;
       -webkit-line-clamp: 2;
-      font-size: 16px;
+      font-size: .16rem;
       position: absolute;
-      left: 10px;
-      top: 85px;
-      line-height: 25px;
+      left: .10rem;
+      top: .85rem;
+      line-height: .25rem;
       font-weight: bold;
     }
     .yellow {
-      width: 360px;
-      height: 71px;
+      width: 3.60rem;
+      height: .71rem;
       position: absolute;
-      top: 155px;
-      left: 5px;
+      top: 1.55rem;
+      left: .05rem;
     }
     .vaild {
-      width: 227px;
-      height: 17px;
-      font-size: 15px;
+      width: 2.27rem;
+      height: .17rem;
+      font-size: .15rem;
       position: absolute;
-      top: 195px;
-      left: 72px;
+      top: 1.95rem;
+      left: .72rem;
       z-index: 11;
     }
     .have {
-      width: 100px;
-      height: 21px;
-      line-height: 21px;
+      width: 1.00rem;
+      height: .21rem;
+      line-height: .21rem;
       color: white;
       position: absolute;
       z-index: 11;
-      left: 280px;
-      top: 181px;
-      font-size: 16px;
+      left: 2.80rem;
+      top: 1.81rem;
+      font-size: .16rem;
       font-weight: bold;
     }
   }
   .story {
-    width: 360px;
-    height: 90px;
+    width: 3.60rem;
+    height: .90rem;
     background: white;
     position: absolute;
-    top: 630px;
-    left: 8px;
-    z-index: 10px;
-    border-radius: 10px;
+    top: 6.30rem;
+    left: .08rem;
+    z-index: .10rem;
+    border-radius: .10rem;
     .shop {
       width:100%;
-      height: 15px;
-      line-height: 20px;
+      height: .15rem;
+      line-height: .20rem;
       position: relative;
-      top: 12px;
-      left: 30px;
-      font-size: 16px;
+      top: .12rem;
+      left: .30rem;
+      font-size: .16rem;
       color: black;
     }
     .mark {
-      width: 100px;
-      height: 38px;
+      width: 1.00rem;
+      height: .38rem;
       background: #68e5c7;
       color: white;
       position: absolute;
-      top: 40px;
-      left: 20px;
-      line-height: 38px;
-      border-radius: 10px;
+      top: .40rem;
+      left: .20rem;
+      line-height: .38rem;
+      border-radius: .10rem;
       text-align: center;
     }
     .sell {
-      width: 100px;
-      height: 38px;
+      width: 1.00rem;
+      height: .38rem;
       background: #68e5c7;
       color: white;
       position: absolute;
-      top: 40px;
-      left: 130px;
-      line-height: 38px;
-      border-radius: 10px;
+      top: .40rem;
+      left: 1.30rem;
+      line-height: .38rem;
+      border-radius: .10rem;
       text-align: center;
     }
     .ser {
-      width: 100px;
-      height: 38px;
+      width: 1.00rem;
+      height: .38rem;
       background: #68e5c7;
       color: white;
       position: absolute;
-      top: 40px;
-      left: 240px;
-      line-height: 38px;
-      border-radius: 10px;
+      top: .40rem;
+      left: 2.40rem;
+      line-height: .38rem;
+      border-radius: .10rem;
       text-align: center;
     }
   }
   .picture {
     width: 100%;
     position: relative;
-    top: 100px;
+    top: 1.00rem;
     img {
       width: 100%;
     }
   }
   .di {
     width: 100%;
-    height: 61px;
+    height: .61rem;
     background: white;
     position: fixed;
     bottom: 0;
     .coll {
       position: absolute;
-      top: 35px;
-      left: 40px;
+      top: .35rem;
+      left: .40rem;
     }
     i {
-      font-size: 20px;
+      font-size: .20rem;
       position: absolute;
-      top: 10px;
-      left: 44px;
+      top: .10rem;
+      left: .44rem;
     }
     .share {
-      border-radius: 10px 0px 0px 10px;
-      width: 130px;
-      height: 50px;
+      border-radius: .10rem 0px 0px .10rem;
+      width: 1.30rem;
+      height: .50rem;
       text-align: center;
       background: #333333;
       position: absolute;
-      left: 100px;
-      top: 5px;
+      left: 1.00rem;
+      top: .05rem;
       color: white;
-      font-size: 16px;
+      font-size: .16rem;
     }
     .waste {
-      border-radius: 0px 10px 10px 0px;
-      width: 130px;
-      height: 50px;
+      border-radius: 0rem .10rem .10rem 0px;
+      width: 1.30rem;
+      height: .50rem;
       text-align: center;
       background: #fe0036;
       position: absolute;
-      left: 230px;
-      top: 5px;
+      left: 2.30rem;
+      top: .05rem;
       color: white;
-      font-size: 16px;
+      font-size: .16rem;
     }
     .share_money {
-      font-size: 16px;
+      font-size: .16rem;
       position: absolute;
-      top: 27px;
-      left: 134px;
+      top: .27rem;
+      left: 1.34rem;
       color: white;
     }
     .waste_money {
-      font-size: 16px;
+      font-size: .16rem;
       position: absolute;
-      top: 27px;
-      left: 270px;
+      top: .27rem;
+      left: 2.70rem;
       color: white;
     }
   }

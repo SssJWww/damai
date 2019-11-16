@@ -76,56 +76,56 @@ export default {
   height: 1.5rem;
   .back {
     position: absolute;
-    top: 10px;
+    top: 0.1rem;
     left: 0;
     width: 0.39rem;
     height: 0.54rem;
     text-align: center;
-    font-size: 25px;
+    font-size: .25rem;
     color: white;
   }
   .east {
     position: absolute;
     top: 0;
-    left: 40px;
+    left: .4rem;
     width: 2.8rem;
     height: 0.52rem;
     color: white;
-    font-size: 19px;
+    font-size: .19rem;
     text-align: center;
     line-height: 0.52rem;
   }
   .search {
     position: absolute;
-    top: 60px;
-    left: 10px;
+    top: .6rem;
+    left: .10rem;
     width: 2.9rem;
     height: 0.38rem;
     input {
       width: 100%;
       height: 100%;
       color: gray;
-      font-size: 17px;
+      font-size: .17rem;
       text-align: center;
-      border-radius: 40px;
+      border-radius: .4rem;
       border: 0;
     }
     i {
       position: absolute;
-      top: 10px;
-      left: 10px;
-      font-size: 16px;
+      top: .10rem;
+      left: .10rem;
+      font-size: .16rem;
     }
     button {
       position: absolute;
-      top: 0px;
-      left: 295px;
+      top: 0rem;
+      left: 2.95rem;
       background: white;
       width: 0.6rem;
       height: 0.4rem;
-      border-radius: 40px;
+      border-radius: .40rem;
       color: red;
-      font-size: 16px;
+      font-size: .16rem;
       border: 0;
     }
   }
@@ -159,18 +159,18 @@ export default {
   }
 }
 ul {
-  height: 500px;
+  height: 5.00rem;
   li {
     background: white;
-    margin-left: 7px;
-    width: 180px;
-    height: 340px;
+    margin-left: .07rem;
+    width: 1.80rem;
+    height: 3.40rem;
     img {
       position: relative;
-      top: 10px;
-      left: 5px;
-      width: 165px;
-      height: 165px;
+      top: .10rem;
+      left: .05rem;
+      width: 1.65rem;
+      height: 1.65rem;
     }
     .content {
       display: -webkit-box;
@@ -178,75 +178,75 @@ ul {
       -webkit-line-clamp: 2;
       overflow: hidden;
       color: black;
-      font-size: 16px;
+      font-size: .16rem;
       position: relative;
-      top: 20px;
+      top: .20rem;
     }
     .sale_money {
       position: relative;
-      top: 30px;
-      font-size: 16px;
+      top: .30rem;
+      font-size: .16rem;
       color: red;
       span {
         position: relative;
-        left: 35px;
-        font-size: 13px;
+        left: .35rem;
+        font-size: .13rem;
         color: #999;
       }
     }
     .cat {
       position: relative;
-      top: 40px;
-      font-size: 14px;
+      top: .40rem;
+      font-size: .14rem;
       span {
         text-decoration: line-through;
-        font-size: 13px;
-        margin-left: 11px;
+        font-size: .13rem;
+        margin-left: .11rem;
       }
     }
     .throw {
       position: relative;
-      top: 50px;
+      top: .50rem;
       color: white;
       text-align: center;
-      width: 50px;
-      height: 25px;
+      width: .50rem;
+      height: .25rem;
       background: #fe0036;
-      line-height: 25px;
+      line-height: .25rem;
       overflow: hidden;
-      font-size: 13px;
+      font-size: .13rem;
       &::before {
         content: "";
         border-radius: 50%;
         position: absolute;
         background: white;
-        top: 7px;
-        left: -6px;
-        width: 10px;
-        height: 10px;
+        top: .07rem;
+        left: -0.06rem;
+        width: .10rem;
+        height: .10rem;
       }
       &::after {
         content: "";
         border-radius: 50%;
         position: absolute;
         background: white;
-        width: 10px;
-        height: 10px;
-        top: 7px;
-        left: 46px;
+        width: .10rem;
+        height: .10rem;
+        top: .07rem;
+        left: .46rem;
       }
     }
     .back_money {
-      width: 64px;
-      height: 26px;
+      width: .64rem;
+      height: .26rem;
       text-align: center;
       background: #ffeed6;
-      font-size: 13px;
+      font-size: .13rem;
       color: #fe0036;
       position: relative;
-      top: 25px;
-      left: 65px;
-      line-height: 26px;
+      top: .25rem;
+      left: .65rem;
+      line-height: .26rem;
     }
   }
 }

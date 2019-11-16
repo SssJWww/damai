@@ -54,94 +54,94 @@ export default {
   }
 }
 .super {
-  width: 128px;
-  height: 50px;
+  width: 1.28rem;
+  height: .50rem;
   position: absolute;
-  top: 3px;
-  left: 10px;
+  top: .03rem;
+  left: .10rem;
   :nth-of-type(1) {
-    font-size: 17px;
-    letter-spacing: 2px;
+    font-size:.17rem;
+    letter-spacing: .02rem;
     font-weight: 200;
-    height: 32px;
-    line-height: 30px;
+    height: .32rem;
+    line-height: .30rem;
   }
   :nth-of-type(2) {
-    height: 17px;
-    font-size: 13px;
-    line-height: 17px;
+    height: .17rem;
+    font-size: .13rem;
+    line-height: .17rem;
   }
 }
 .city {
   width: 100%;
-  height: 51px;
+  height: .51rem;
   text-align: center;
-  font-size: 20px;
+  font-size: .20rem;
   background: white;
-  line-height: 51px;
-  margin-top: 20px;
+  line-height: .51rem;
+  margin-top: .20rem;
 }
 .super-story {
-  height: 300px;
+  height: 3.00rem;
   width: 100%;
   background: white;
   ul {
     width: 100%;
-    height: 300px;
+    height: 3.00rem;
     li:nth-of-type(4) {
       border-right: 0;
-      border-top: 1px solid #eee;
+      border-top: .01rem solid #eee;
     }
     li:nth-of-type(8) {
       border-right: 0;
     }
     li:nth-of-type(1) {
-      border-top: 1px solid #eee;
+      border-top: .01rem solid #eee;
     }
     li:nth-of-type(2) {
-      border-top: 1px solid #eee;
+      border-top: .01rem solid #eee;
     }
     li:nth-of-type(3) {
-      border-top: 1px solid #eee;
+      border-top: .01rem solid #eee;
     }
     li {
       text-align: center;
-      width: 93px;
-      height: 150px;
-      border-right: 1px solid #eee;
-      border-bottom: 1px solid #eee;
+      width: .93rem;
+      height: 1.50rem;
+      border-right: .01rem solid #eee;
+      border-bottom: .01rem solid #eee;
       img {
         position: relative;
-        top: 13px;
-        left: 13px;
-        width: 66px;
-        height: 66px;
+        top: .13rem;
+        left: .13rem;
+        width: .66rem;
+        height: .66rem;
         border-radius: 50%;
       }
       p {
-        font-size: 16px;
+        font-size: .16rem;
         color: black;
         position: relative;
-        top: 15px;
+        top: .15rem;
       }
       h3 {
-        font-size: 13px;
+        font-size: .13rem;
         position: relative;
-        top: 20px;
+        top: .20rem;
         font-weight: 200;
       }
       a {
         display: block;
-        width: 93px;
-        height: 150px;
+        width: .93rem;
+        height: 1.50rem;
         position: absolute;
       }
     }
   }
 }
 .rank {
-  margin-top: 15px;
-  width: 375px;
+  margin-top: .15rem;
+  width: 3.75rem;
   img {
     width: 100%;
   }

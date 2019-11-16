@@ -91,18 +91,18 @@ export default {
   margin-top: 0.15rem;
   background-color: #fff;
   .margin {
-    margin: 0 16px;
+    margin: 0 .16rem;
     overflow: hidden;
     h4 {
       height: 0.32rem;
       width: 3.43rem;
-      font-size: 17px;
+      font-size: .17rem;
       font-weight: 500;
       background-color: #fff;
       margin-top: 0.12rem;
     }
     p {
-      font-size: 13px;
+      font-size: .13rem;
       background-color: #fff;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -142,7 +142,7 @@ export default {
     left: 50%;
     margin-top: -0.25rem;
     margin-left: -0.9rem;
-    font-size: 16px;
+    font-size: .16rem;
     color: #999;
     outline: none;
   }

@@ -114,20 +114,20 @@ export default {
   height: 0.52rem;
   background: white;
   position: relative;
-  border-bottom: 1px solid gold;
+  border-bottom: .01rem solid gold;
   .baby {
     width: 2.8rem;
     height: 0.52rem;
     line-height: 0.52rem;
     text-align: center;
     position: absolute;
-    left: 40px;
+    left: .40rem;
   }
   .icon-search {
     display: inline-block;
     width: 0.52rem;
     height: 0.52rem;
-    font-size: 16px;
+    font-size: .16rem;
     position: absolute;
     left: 3.1rem;
     text-align: center;
@@ -137,7 +137,7 @@ export default {
     display: inline-block;
     width: 0.52rem;
     height: 0.52rem;
-    font-size: 20px;
+    font-size: .20rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -154,25 +154,25 @@ export default {
     width: 25%;
     height: 0.47rem;
     text-align: center;
-    font-size: 17px;
+    font-size: .17rem;
     line-height: 0.47rem;
     color: black;
   }
 }
 
 .jingdong {
-  height: 500px;
+  height: 5.00rem;
   li {
     background: white;
-    margin-left: 7px;
-    width: 180px;
-    height: 340px;
+    margin-left: .07rem;
+    width: 1.80rem;
+    height: 3.40rem;
     img {
       position: relative;
-      top: 10px;
-      left: 5px;
-      width: 165px;
-      height: 165px;
+      top: .10rem;
+      left: .05rem;
+      width: 1.65rem;
+      height: 1.65rem;
     }
     .content {
       display: -webkit-box;
@@ -180,81 +180,81 @@ export default {
       -webkit-line-clamp: 2;
       overflow: hidden;
       color: black;
-      font-size: 16px;
+      font-size: .16rem;
       position: relative;
-      top: 20px;
+      top: .20rem;
     }
     .sale_money {
       position: relative;
-      top: 30px;
-      font-size: 16px;
+      top: .30rem;
+      font-size: .16rem;
       color: red;
       span {
         position: relative;
-        left: 35px;
-        font-size: 13px;
+        left: .35rem;
+        font-size: .13rem;
         color: #999;
       }
     }
     .cat {
       position: relative;
-      top: 40px;
-      font-size: 14px;
+      top: .40rem;
+      font-size: .14rem;
       span {
         text-decoration: line-through;
-        font-size: 13px;
-        margin-left: 11px;
+        font-size: .13rem;
+        margin-left: .11rem;
       }
     }
     .throw {
       position: relative;
-      top: 50px;
+      top: .50rem;
       color: white;
       text-align: center;
-      width: 50px;
-      height: 25px;
+      width: .50rem;
+      height: .25rem;
       background: #fe0036;
-      line-height: 25px;
+      line-height: .25rem;
       overflow: hidden;
-      font-size: 13px;
+      font-size: .13rem;
       &::before {
         content: "";
         border-radius: 50%;
         position: absolute;
         background: white;
-        top: 7px;
-        left: -6px;
-        width: 10px;
-        height: 10px;
+        top: .07rem;
+        left: -0.06rem;
+        width: .10rem;
+        height: .10rem;
       }
       &::after {
         content: "";
         border-radius: 50%;
         position: absolute;
         background: white;
-        width: 10px;
-        height: 10px;
-        top: 7px;
-        left: 46px;
+        width: .10rem;
+        height: .10rem;
+        top: .07rem;
+        left: .46rem;
       }
     }
     .back_money {
-      width: 64px;
-      height: 26px;
+      width: .64rem;
+      height: .26rem;
       text-align: center;
       background: #ffeed6;
-      font-size: 13px;
+      font-size: .13rem;
       color: #fe0036;
       position: relative;
-      top: 25px;
-      left: 65px;
-      line-height: 26px;
+      top: .25rem;
+      left: .65rem;
+      line-height: .26rem;
     }
   }
 }
 .active {
   color: red;
-  border-bottom: 3px solid red;
+  border-bottom: .03rem solid red;
   margin: 0 auto;
   width: 0.1rem;
 }
@@ -263,12 +263,12 @@ export default {
   width: 3rem;
   height: 3rem;
   position: absolute;
-  left: 80px;
+  left: .80rem;
   .title {
     position: absolute;
     top: 2.05rem;
     left: 0.4rem;
-    font-size: 17px;
+    font-size: .17rem;
     color: gray;
   }
 }

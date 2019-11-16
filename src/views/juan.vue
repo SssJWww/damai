@@ -64,7 +64,7 @@ export default {
     left: 50%;
     margin-top: -0.25rem;
     margin-left: -0.9rem;
-    font-size: 16px;
+    font-size: .16rem;
     color: #999;
     outline: none;
   }
