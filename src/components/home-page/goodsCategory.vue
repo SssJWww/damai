@@ -33,7 +33,7 @@ export default {
 
   mounted () {
     Axios.post('/api/goods/goodsCategory').then(res => {
-      console.log(res.data.data.content['15'])
+      // console.log(res.data.data.content['15'])
       /* eslint-disable no-new */
       new BScroll('.Lscroll')
       this.datalist = res.data.data.content
@@ -50,16 +50,16 @@ export default {
     },
     picclick (data) {
       var arr = []
-      console.log(data.children)
+      // console.log(data.children)
       for (let i in data.children) {
         arr.push(data.children[i]) // 属性
       }
       this.current = data.id
       this.newdatalist = arr
-      console.log(this.newdatalist)
+      // console.log(this.newdatalist)
     },
     handleClick (item) {
-      console.log(item)
+      // console.log(item)
     }
   }
 }
