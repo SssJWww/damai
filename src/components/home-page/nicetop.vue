@@ -3,12 +3,12 @@
     <div class="headers">
       <p class="nine">9.9超值专区</p>
       <p class="JX">每日精选 全场包邮</p>
-      <router-link tag="span" to="/you">更多 > </router-link>>
+      <router-link tag="span" to="/you">更多 > </router-link>
     </div>
     <ul>
       <li v-for="data in datalist" :key="data.id" @click="handclick(data.num_iid)">
         <img :src="data.pict_url" alt />
-        <p class="guide">{{data.guide_content}}</p>
+        <p class="guide">{{data.short_title}},{{data.title}}</p>
         <p class="price">￥{{data.coupon_after_price}}</p>
         <p class="volume">月销 {{data.volume}}</p>
         <p class="iconfont icon-discount QQ">{{data.coupon_discount}}元券</p>
