@@ -130,6 +130,7 @@ export default {
       margin-top: 0.1rem;
       background: white;
       position: relative;
+      overflow: hidden;
       img {
         height: auto;
         width: 1.65rem;
@@ -152,10 +153,11 @@ export default {
         color: black;
         height: 0.4rem;
         width: 1.65rem;
+        overflow: hidden;
       }
       .price {
         color: #fd366d;
-        font-size: 0.2rem;
+        font-size: 0.16rem;
       }
        .QQ{
           height: 0.25rem;
@@ -178,7 +180,9 @@ export default {
       .volume{
           position: absolute;
           top: 2.3rem;
-          left: 1rem;
+          left: 0.9rem;
+          font-size: 0.14rem;
+          overflow: hidden;
       }
       .taoBao{
           text-decoration: line-through

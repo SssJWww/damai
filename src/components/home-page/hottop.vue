@@ -7,7 +7,7 @@
     <ul>
       <li v-for="data in datalist" :key="data.id" @click="handclick(data.num_iid)">
         <img :src="data.pict_url" alt />
-        <p class="guide">{{data.title}}</p>
+        <p class="guide">{{data.title}},{{data.guide_content}}</p>
         <p class="price">￥{{data.coupon_after_price}}</p>
         <p class="volume">月销 {{data.volume}}</p>
         <p class="iconfont icon-discount QQ">{{data.coupon_discount}}元券</p>
