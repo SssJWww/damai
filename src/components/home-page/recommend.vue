@@ -151,7 +151,7 @@ export default {
       .guide {
         margin-top: 0.2rem;
         color: black;
-        height: 0.4rem;
+        height: 0.38rem;
         width: 1.65rem;
         overflow: hidden;
       }
